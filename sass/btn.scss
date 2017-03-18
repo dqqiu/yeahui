@@ -1,0 +1,194 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "variables", "mixin";
+@import "compass/reset";
+
+%ft-12 {
+	font-size: 12px;
+}
+
+/* YeahUI 按钮样式 */
+.btn {
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 0;
+	padding: 6px 12px;
+	font-weight: 400;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	line-height: 1.4;
+	user-select: none;
+	outline: 0;
+	background-image: none;
+	@include radius();
+	border: 1px solid transparent;
+}
+
+.btn-round {
+	@include radius(100px !important);
+}
+
+.btn-blank {
+	background: $white-color !important;
+}
+
+.btn-blank.btn-primary {
+	color: $primary-color;
+
+	&:hover {
+		background-color: $primary-color !important;
+		color: $primary-color;
+	}
+}
+
+.btn-blank.btn-info {
+	color: $info-color;
+
+	&:hover {
+		background-color: $info-color !important;
+		color: $white-color;
+	}
+}
+
+.btn-blank.btn-warning {
+	color: $warning-color;
+
+	&:hover {
+		background-color: $warning-color !important;
+		color: $white-color;
+	}
+}
+
+.btn-blank.btn-success {
+	color: $success-color;
+
+	&:hover {
+		background-color: $success-color !important;
+		color: $white-color;
+	}
+}
+
+.btn-blank.btn-danger {
+	color: $danger-color;
+
+	&:hover {
+		background-color: $danger-color !important;
+		color: $white-color;
+	}
+}
+
+
+/* YeahUI迷你按钮 */
+.btn-mini {
+	@extend %ft-12;
+	padding: 1px 5px;
+	line-height: 1.5;
+}
+
+/* YeahUI小型按钮 */
+.btn-small {
+	@extend %ft-12;
+	padding: 5px 10px;
+	line-height: 1.5;
+}
+
+/* YeahUI大型按钮 */
+.btn-large {
+	font-size: 16px;
+	padding: 10px 16px;
+	line-height: 1.3;
+	@include radius(5px);
+}
+
+/* YeahUI默认按钮 */
+.btn-default {
+	color: #333;
+	background-color: $white-color;
+	border-color: #e2e2e2;
+	&:hover {
+		border-color: #CCC;
+	}
+}
+
+/* 首选按钮 */
+.btn-primary {
+	color: $white-color;
+	@include backAndBorderColor($primary-color);
+	&:hover {
+		@include backAndBorderColor($primary-hover-color);
+	}
+}
+
+/* 信息按钮 */
+.btn-info {
+	color: $white-color;
+	@include backAndBorderColor($info-color);
+	&:hover {
+		@include backAndBorderColor($info-hover-color);
+	}
+}
+
+/* 警告按钮 */
+.btn-warning {
+	color: $white-color;
+	@include backAndBorderColor($warning-color);
+	&:hover {
+		@include backAndBorderColor($warning-hover-color);
+	}
+}
+
+/* 成功按钮 */
+.btn-success {
+	color: $white-color;
+	@include backAndBorderColor($success-color);
+	&:hover {
+		@include backAndBorderColor($success-hover-color);
+	}
+}
+
+/* 危险按钮 */
+.btn-danger {
+	color: $white-color;
+	@include backAndBorderColor($danger-color);
+	&:hover {
+		@include backAndBorderColor($danger-hover-color);
+	}
+}
+
+/* 链接按钮，样式类似于a标签 */
+.btn-link {
+	color: #01AAED;
+	background-color: transparent;
+	font-weight: 400;
+	@include radius(0);
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.btn-group {
+	margin: 10px 0;
+	clear: both;
+}
+
+.btn-group .btn {
+	float: left;
+	@include radius(0 !important);
+
+	&:first-child {
+		border-radius: 3px 0 0 3px !important;
+	}
+
+	&:last-child {
+		border-radius: 0 3px 3px 0 !important;
+	}
+}
+
+
+
+

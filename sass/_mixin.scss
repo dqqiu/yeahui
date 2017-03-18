@@ -1,0 +1,22 @@
+// 圆角边框设置
+@mixin radius($width: 3px) {
+	border-radius: $width;
+	-o-border-radius: $width;
+	-ms-border-radius: $width;
+	-moz-border-raduis: $width;
+	-webkit-border-radius: $width;
+}
+
+// 背景色和边框色设置
+@mixin backAndBorderColor($color) {
+	border-color: $color;
+	background-color: $color;
+}
+
+@mixin boxSizing($boxSizing) {
+	box-sizing: $boxSizing;
+	-o-box-sizing: $boxSizing;
+	-ms-box-sizing: $boxSizing;
+	-moz-box-sizing: $boxSizing;
+	-webkit-box-sizing: $boxSizing;
+}

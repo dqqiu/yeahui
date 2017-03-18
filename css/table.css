@@ -1,0 +1,67 @@
+/* line 3, ../sass/table.scss */
+.yeah-table {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid #e2e2e2;
+}
+
+/* line 10, ../sass/table.scss */
+.yeah-table th,
+.yeah-table td {
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid #e2e2e2;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+/* line 20, ../sass/table.scss */
+.yeah-table tr {
+  transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+}
+/* line 28, ../sass/table.scss */
+.yeah-table tr:hover th, .yeah-table tr:hover td, .yeah-table tr.hover th, .yeah-table tr.hover td {
+  background-color: #f8f8f8 !important;
+}
+
+/* line 34, ../sass/table.scss */
+.yeah-table th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+
+/* line 39, ../sass/table.scss */
+.yeah-table td {
+  background-color: #FFF;
+}
+
+/* line 43, ../sass/table.scss */
+.yeah-table[yeah-type="no-line"] th,
+.yeah-table[yeah-type="no-line"] td {
+  border: none !important;
+}
+
+/* line 48, ../sass/table.scss */
+.yeah-table[yeah-type="row-line"] th,
+.yeah-table[yeah-type="row-line"] td {
+  border: none !important;
+  border-bottom: 1px solid #e2e2e2 !important;
+}
+
+/* line 54, ../sass/table.scss */
+.yeah-table[yeah-type="column-line"] th,
+.yeah-table[yeah-type="column-line"] td {
+  border: none !important;
+  border-right: 1px solid #e2e2e2 !important;
+}
+
+/* line 60, ../sass/table.scss */
+.yeah-table-zebra tr:nth-child(even) td {
+  background-color: #f8f8f8 !important;
+}

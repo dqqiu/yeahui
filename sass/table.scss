@@ -1,0 +1,62 @@
+@import "variables", "mixin";
+
+.yeah-table {
+	margin: 10px 0;
+	width: 100%;
+	background-color: $white-color;
+	border: 1px solid #e2e2e2;
+}
+
+.yeah-table th,
+.yeah-table td {
+	padding: 10px 15px;
+	font-size: 14px;
+	text-align: left;
+	border: 1px solid #e2e2e2;
+	min-height: 20px;
+	line-height: 20px;
+}
+
+.yeah-table tr {
+	transition: all .3s;
+	-o-transition: all .3s;
+	-ms-transition: all .3s;
+	-moz-transition: all .3s;
+    -webkit-transition: all .3s;
+
+	&:hover,&.hover {
+		th, td {
+			background-color: #f8f8f8 !important;
+		}
+	}
+}
+
+.yeah-table th {
+	background-color: #f2f2f2;
+	font-weight: 700;
+}
+
+.yeah-table td {
+	background-color: $white-color;
+}
+
+.yeah-table[yeah-type="no-line"] th,
+.yeah-table[yeah-type="no-line"] td {
+	border: none !important;
+}
+
+.yeah-table[yeah-type="row-line"] th,
+.yeah-table[yeah-type="row-line"] td {
+	border: none !important;
+	border-bottom: 1px solid #e2e2e2 !important;
+}
+
+.yeah-table[yeah-type="column-line"] th,
+.yeah-table[yeah-type="column-line"] td {
+	border: none !important;
+	border-right: 1px solid #e2e2e2 !important;
+}
+
+.yeah-table-zebra tr:nth-child(even) td {
+	background-color: #f8f8f8 !important;
+}

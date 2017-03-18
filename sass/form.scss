@@ -1,0 +1,370 @@
+
+@import "variables", "mixin";
+.yeah-form .yeah-checkbox, .yeah-form .yeah-radio,
+.yeah-checkbox *, .yeah-radio * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%border-box {
+	box-sizing: border-box !important;
+	-o-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+}
+
+.yeah-form {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.yeah-form-placeholder {
+	position: relative;
+	float: left;
+	display: block;
+	padding: 8px 0;
+	margin-right: 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #999;
+}
+
+.yeah-form-panel .yeah-form-label {
+	background-color: #fbfbfb;
+	border: 1px solid #e6e6e6;
+	width: 110px;
+	@include radius(2px 0 0 2px !important);
+}
+
+.yeah-form-panel .yeah-input {
+	@include radius(0 2px 2px 0 !important);
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+.yeah-input-inline {
+	display: inline-block;
+	width: 190px;
+	margin-right: 10px;
+	float: left;
+	vertical-align: middle;
+}
+
+.yeah-form-panel .yeah-input-inline {
+	position: relative;
+	left: -1px;
+}
+
+.yeah-form-panel .yeah-form-wrapper {
+	margin-left: 110px;
+	left: -1px;
+}
+
+/* 控件组 */
+.yeah-form-group {
+	margin-bottom: 15px;
+	clear: both;
+}
+
+.yeah-form-group .yeah-inline {
+	margin-bottom: 5px;
+	margin-right: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+/* 表单文本 */
+.yeah-form-label {
+	float: left;
+	display: block;
+	padding: 7px 15px;
+	width: 110px;
+	font-weight: 400;
+	text-align: right;
+	line-height: 20px;
+	position: relative;
+	@extend %border-box;
+}
+
+.yeah-form-wrapper {
+    margin-left: 110px;
+    min-height: 36px;
+    position: relative;
+}
+
+/* input输入框 */
+.yeah-input {
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #e6e6e6;
+	background-color: $white-color;
+	@include radius();
+	outline: none;
+	box-sizing: border-box !important;
+	-o-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+
+	&:focus, &.focus {
+		border-color: #d2d2d2;
+	}
+
+	&:disabled, &.yeah-disabled {
+		cursor: not-allowed;
+	}
+}
+
+/* 文本域 */
+.yeah-textarea {
+	min-height: 100px;
+	height: auto;
+	padding: 6px 10px;
+	resize: vertical;
+	width: 100%;
+	display: block;
+	border: 1px solid #e6e6e6;
+	background-color: $white-color;
+	@include radius();
+	outline: none;
+	@extend %border-box;
+
+	&:focus, &.focus {
+		border-color: #d2d2d2;
+	}
+}
+
+/* 下拉框 */
+.yeah-select {
+	position: relative;
+
+	.yeah-select-title {
+		position: relative;
+	}
+
+	.icon-caret-down {
+		position: absolute;
+		right: 10px;
+		top: 8px;
+		cursor: pointer;
+		font-size: 20px;
+		color: #c2c2c2;
+		transition: all .3s;
+		-o-transition: all .3s;
+		-ms-transition: all .3s;
+		-moz-transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+
+	dl {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 38px;
+		padding: 5px 0;
+		z-index: 999;
+		min-width: 100%;
+		border: 1px solid #d2d2d2;
+		max-height: 300px;
+		overflow-y: auto;
+		background-color: $white-color;
+		@include radius(2px);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+		-o-box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+		-ms-box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+		-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+		-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+		@extend %border-box;
+		dd {
+			cursor: pointer;
+			padding: 0 10px;
+			line-height: 36px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			&:hover {
+				background-color: #f2f2f2;
+			}
+
+			&.yeah-current {
+				color: $white-color;
+				background-color: $primary-color;
+			}
+		}
+	}
+
+	&.yeah-focus dl {
+		display: block;
+	}
+
+}
+
+/* 多选框 */
+.yeah-checkbox {
+	position: relative;
+	height: 30px;
+	line-height: 28px;
+	margin-right: 10px;
+	padding-right: 30px;
+	border: 1px solid #d2d2d2;
+	cursor: pointer;
+	@include radius(2px);
+	transition: .1s linear;
+	-o-transition: .1s linear;
+	-ms-transition: .1s linear;
+	-moz-transition: .1s linear;
+	-webkit-transition: .1s linear;
+	@extend %border-box;
+	margin-top: 4px;
+	background-color: #fff;
+
+	&:hover {
+		@include backAndBorderColor(#d2d2d2);
+		i {
+			color: #d2d2d2;
+		}
+	}
+
+	&.yeah-checked {
+		border-color: $primary-color;
+		span {
+			@include backAndBorderColor($primary-color);
+		}
+
+		i {
+			color: $primary-color;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	span {
+		font-size: 14px;
+		padding: 0 10px;
+		height: 100%;
+		background-color: #d2d2d2;
+		color: #fff;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		vertical-align: initial;
+	}
+
+	i {
+		background-color: #fff;
+		line-height: 28px;
+		width: 30px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+/* 原生多选框 */
+.yeah-checkbox.yeah-original {
+	height: auto!important;
+	line-height: normal !important;
+    border: none!important;
+    margin-right: 0;
+    padding-right: 0;
+    background: 0 0;
+    margin-top: 8px;
+
+	span {
+		float: right;
+		padding-right: 15px;
+		background: none;
+		line-height: 22px;
+		color: $default-color;
+	}
+
+	&.yeah-checked i {
+		background-color: $primary-color;
+		border-color: $primary-color;
+	}
+
+	i {
+		position: relative;
+		background-color: $white-color;
+		border: 1px solid #d2d2d2;
+		color: #fff;
+		font-size: 12px;
+		line-height: 16px;
+		width: 16px;
+		@include radius(2px);
+
+		&:hover {
+			border-color: $primary-color;
+		}
+	}
+}
+
+/* 单选按钮 */
+.yeah-radio {
+	padding: 6px 10px 0 0;
+	line-height: 28px;
+	cursor: pointer;
+	font-size: 0;
+
+	i {
+		width: 18px;
+		line-height: 18px;
+		@include radius(50%);
+		border: 2px solid #c2c2c2;
+		text-align: center;
+		color: $white-color;
+		font-size: 12px;
+		margin-right: 8px;
+
+		&:hover {
+			border-color: $primary-color;
+		}
+	}
+
+	span {
+		font-size: 14px;
+	}
+
+	&.yeah-checked {
+		i {
+			color: $primary-color;
+			border-color: $primary-color;
+		}
+	}
+
+	&.yeah-disabled {
+		cursor: not-allowed;
+		i {
+			border: 2px solid #d2d2d2;
+		}
+
+		span {
+			color: #d2d2d2 !important;
+		}
+	}
+}
+
+.yeah-fieldset {
+	border: none;
+	border-top: 1px solid #e2e2e2;
+	margin: 20px 0 15px;
+}
+
+.yeah-fieldset legend {
+	padding: 0 10px;
+	font-size: 20px;
+	margin-left: 30px;
+	font-weight: 300;
+}
+
