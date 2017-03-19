@@ -22,7 +22,7 @@
   -webkit-box-sizing: border-box !important;
 }
 
-/* line 18, ../sass/code.scss */
+/* line 19, ../sass/code.scss */
 .yeah-code-box .yeah-code-title {
   position: relative;
   font-size: 12px;
@@ -32,7 +32,7 @@
   line-height: 30px;
   border-bottom: 1px solid #31312f;
 }
-/* line 26, ../sass/code.scss */
+/* line 27, ../sass/code.scss */
 .yeah-code-box .yeah-code-title a {
   position: absolute;
   right: 10px;
@@ -41,16 +41,16 @@
   text-decoration: none;
 }
 
-/* line 35, ../sass/code.scss */
+/* line 36, ../sass/code.scss */
 .yeah-code-box .yeah-code-body {
   position: relative;
   overflow: auto;
   outline: none;
 }
-/* line 40, ../sass/code.scss */
+/* line 41, ../sass/code.scss */
 .yeah-code-box .yeah-code-body li {
   position: relative;
-  margin-left: 50px;
+  margin-left: 0;
   padding: 0 8px;
   line-height: 20px;
   border-left: 1px solid #31312f;
@@ -61,7 +61,7 @@
   color: #e6db74;
 }
 
-/* line 54, ../sass/code.scss */
+/* line 55, ../sass/code.scss */
 .yeah-code-box[yeah-type="row"] .yeah-code-body li {
-  margin-left: 0;
+  margin-left: 50px;
 }

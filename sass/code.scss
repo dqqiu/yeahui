@@ -11,6 +11,7 @@
 	font-family: Courier New;
 	line-height: 20px;
 	white-space: nowrap;
+
 	@include radius(5px);
 	@include boxSizing(border-box !important);
 }
@@ -39,7 +40,7 @@
 
 	li {
 		position: relative;
-		margin-left: 50px;
+		margin-left: 0;
 		padding: 0 8px;
 		line-height: 20px;
 		border-left: 1px solid #31312f;
@@ -52,5 +53,5 @@
 }
 
 .yeah-code-box[yeah-type="row"] .yeah-code-body li {
-	margin-left: 0;
+	margin-left: 50px;
 }

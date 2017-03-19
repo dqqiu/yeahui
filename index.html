@@ -4,12 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>YeahUI</title>
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/btn.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css">
-	<link rel="stylesheet" type="text/css" href="css/code.css">
-	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="css/yeahui.css">
 	<style type="text/css">
 		body {
 			font-size: 12px;
@@ -28,40 +23,15 @@
 	</fieldset>
 
 	<div class="sample">
-		<div>
-			<label>正常默认按钮</label>
-			<button class="btn btn-default">正常默认按钮</button>
-		</div>
-		<div>
-			<label>正常首选按钮</label>
-			<button class="btn btn-primary">正常首选按钮</button>
-		</div>
-		<div>
-			<label>小型信息按钮</label>
-			<button class="btn btn-info btn-small btn-blank">小型信息空心按钮</button>
-		</div>
-		<div>
-			<label>迷你警告按钮</label>
-			<button class="btn btn-warning btn-mini">迷你警告按钮</button>
-		</div>
-		<div>
-			<label>大型成功按钮</label>
-			<button class="btn btn-success btn-large">大型成功按钮</button>
-		</div>
-		<div>
-			<label>大型危险按钮</label>
-			<button class="btn btn-danger btn-large btn-round">大型危险圆角按钮</button>
-		</div>
-		<div>
-			<label>大型危险空心按钮</label>
-			<button class="btn btn-warning btn-large btn-round btn-blank">大型危险圆角空心按钮</button>
-		</div>
-		<div>
-			<label>正常链接按钮</label>
-			<button class="btn btn-link">正常链接按钮</button>
-		</div>
-		<div class="clearfix">
-			<label>按钮组</label>
+		<button class="btn btn-default">正常默认按钮</button>
+		<button class="btn btn-primary">正常首选按钮</button>
+		<button class="btn btn-info btn-small btn-blank">小型信息空心按钮</button>
+		<button class="btn btn-warning btn-mini">迷你警告按钮</button>
+		<button class="btn btn-success btn-large">大型成功按钮</button>
+		<button class="btn btn-danger btn-large btn-round">大型危险圆角按钮</button>
+		<button class="btn btn-warning btn-large btn-round btn-blank">大型危险圆角空心按钮</button>
+		<button class="btn btn-link">正常链接按钮</button>
+		<div class="yeah-clearfix">
 			<div class="btn-group">
 				<button class="btn btn-default">按钮1</button>
 				<button class="btn btn-primary">按钮2</button>
@@ -72,6 +42,33 @@
 			</div>
 		</div>
 	</div>
+
+	<fieldset class="yeah-fieldset">
+		<legend>
+			按钮演示源代码
+		</legend>
+	</fieldset>
+
+	<pre class="yeah-code-box" yeah-title="按钮样式源代码" yeah-type="row" yeah-height="100px" yeah-code-encode="true">
+		<button class="btn btn-default">正常默认按钮</button>
+		<button class="btn btn-primary">正常首选按钮</button>
+		<button class="btn btn-info btn-small btn-blank">小型信息空心按钮</button>
+		<button class="btn btn-warning btn-mini">迷你警告按钮</button>
+		<button class="btn btn-success btn-large">大型成功按钮</button>
+		<button class="btn btn-danger btn-large btn-round">大型危险圆角按钮</button>
+		<button class="btn btn-warning btn-large btn-round btn-blank">大型危险圆角空心按钮</button>
+		<button class="btn btn-link">正常链接按钮</button>
+		<div class="yeah-clearfix">
+		  <div class="btn-group">
+		    <button class="btn btn-default">按钮1</button>
+		    <button class="btn btn-primary">按钮2</button>
+		    <button class="btn btn-info">按钮3</button>
+		    <button class="btn btn-warning">按钮4</button>
+		    <button class="btn btn-success">按钮5</button>
+		    <button class="btn btn-danger">按钮6</button>
+		  </div>
+		</div>
+	</pre>
 
 	<fieldset class="yeah-fieldset">
 		<legend>
@@ -176,11 +173,13 @@
 		</div>
 
 		<div class="yeah-form-group">
-			<label class="yeah-form-label">密码</label>
-			<div class="yeah-input-inline">
-				<input type="password" placeholder="请输入您的密码" maxlength="20" class="yeah-input">
+			<div class="yeah-inline">
+				<label class="yeah-form-label">密码</label>
+				<div class="yeah-input-inline">
+					<input type="password" placeholder="请输入您的密码" maxlength="20" class="yeah-input">
+				</div>
+				<div class="yeah-form-placeholder">请输入6-20位字符</div>
 			</div>
-			<div class="yeah-form-placeholder">请输入6-20位字符</div>
 		</div>
 		<div class="yeah-form-group">
 			<div class="yeah-inline">
@@ -206,35 +205,74 @@
 
 	<fieldset class="yeah-fieldset">
 		<legend>
+			行内表单演示源代码
+		</legend>
+	</fieldset>
+
+	<pre class="yeah-code-box" yeah-title="行内表单演示源代码" yeah-code-encode="true" yeah-type="row" yeah-code-height="100">
+		<form class="yeah-form yeah-form-panel">
+			<div class="yeah-form-group">
+				<label class="yeah-form-label">用户名</label>
+				<div class="yeah-form-wrapper">
+					<input type="text" placeholder="请输入用户名" class="yeah-input">
+				</div>
+			</div>
+
+			<div class="yeah-form-group">
+				<div class="yeah-inline">
+					<label class="yeah-form-label">密码</label>
+					<div class="yeah-input-inline">
+						<input type="password" placeholder="请输入您的密码" maxlength="20" class="yeah-input">
+					</div>
+					<div class="yeah-form-placeholder">请输入6-20位字符</div>
+				</div>
+			</div>
+			<div class="yeah-form-group">
+				<div class="yeah-inline">
+					<label class="yeah-form-label">电话号码</label>
+					<div class="yeah-input-inline">
+						<input type="text" placeholder="请输入您的密码" class="yeah-input">
+					</div>
+				</div>
+				<div class="yeah-inline">
+					<label class="yeah-form-label">电话号码</label>
+					<div class="yeah-input-inline">
+						<input type="text" placeholder="请输入您的密码" class="yeah-input">
+					</div>
+				</div>
+				<div class="yeah-inline">
+					<label class="yeah-form-label">电话号码</label>
+					<div class="yeah-input-inline">
+						<input type="text" placeholder="请输入您的密码" class="yeah-input">
+					</div>
+				</div>
+			</div>
+		</form>
+	</pre>
+
+	<fieldset class="yeah-fieldset">
+		<legend>
 			代码块演示
 		</legend>
 	</fieldset>
 
 	<div>
-		<pre class="yeah-code-box">
-			<h5 class="yeah-code-title">Java代码示例<a href="javascript:void(0);">yeahui.com</a></h5>
-			<ol class="yeah-code-body" id="codeBody" contenteditable="true">
-				<li>package org.spirit.yeah.ui;</li>
-				<li></li>
-				<li>public class CodeTest {</li>
-				<li>  public static void main(String[] args) {</li>
-				<li>    System.out.println("Yeah code test!!!");</li>
-				<li>  }</li>
-				<li>}</li>
-			</ol>
+		<pre class="yeah-code-box" yeah-title="Java代码示例">
+				package org.spirit.yeah.ui;
+				public class CodeTest {
+				  public static void main(String[] args) {
+				    System.out.println("Yeah code test!!!");
+				  }
+				}
 		</pre>
 
-		<pre class="yeah-code-box" yeah-type="row">
-			<h5 class="yeah-code-title">Java代码示例<a href="javascript:void(0);">yeahui.com</a></h5>
-			<ol class="yeah-code-body" id="codeBody">
-				<li>package org.spirit.yeah.ui;</li>
-				<li></li>
-				<li>public class CodeTest {</li>
-				<li>  public static void main(String[] args) {</li>
-				<li>    System.out.println("Yeah code test!!!");</li>
-				<li>  }</li>
-				<li>}</li>
-			</ol>
+		<pre class="yeah-code-box" yeah-type="row" yeah-code-editable="true">
+				package org.spirit.yeah.ui;
+				public class CodeTest {
+				  public static void main(String[] args) {
+				    System.out.println("Yeah code test!!!");
+				  }
+				}
 		</pre>
 	</div>
 
@@ -500,5 +538,29 @@
 			</tbody>
 		</table>
 	</div>
+
+
+	<div>
+		<ul class="yeah-nav">
+			<li class="yeah-nav-item yeah-active">
+				<a href>首页</a>
+			</li>
+			<li class="yeah-nav-item">
+				<a href>产品</a>
+			</li>
+			<li class="yeah-nav-item">
+				<a href>最新策划</a>
+			</li>
+			<li class="yeah-nav-item">
+				<a href>联系我们</a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="yeah/modules/jquery.js"></script>
+	<script type="text/javascript" src="yeah/modules/code.js"></script>
+	<script type="text/javascript">
+		$(document).code({});
+	</script>
 </body>
 </html>

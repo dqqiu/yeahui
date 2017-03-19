@@ -1,109 +1,118 @@
-@import "variables", "mixin";
+@import "variables", "mixin", "compass/reset";
 
-.text-center {
+/** 滚动条样式重置 **/
+::-webkit-scrollbar{width: 8px; height: 10px;}
+::-webkit-scrollbar-button:vertical{display: none;}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner{background-color: #e6e6e6;}
+::-webkit-scrollbar-thumb{@include radius(10px !important); background-color: rgba(0,0,0,.3);}
+::-webkit-scrollbar-thumb:vertical:hover{background-color: rgba(0,0,0,.35);}
+::-webkit-scrollbar-thumb:vertical:active{background-color: rgba(0,0,0,.38);}
+
+.yeah-text-center {
 	text-align: center;
 }
 
-.text-left {
+.yeah-text-left {
 	text-align: left;
 }
 
-.text-right {
+.yeah-text-right {
 	text-align: right;
 }
 
 
-.text-white {
+.yeah-text-white {
 	color: $white-color;
 }
 
-.text-black {
+.yeah-text-black {
 	color: $black-color;
 }
 
-.text-primary {
+.yeah-text-primary {
 	color: $primary-color;
 }
 
-.text-info {
+.yeah-text-info {
 	color: $info-color;
 }
 
-.text-warning {
+.yeah-text-warning {
 	color: $warning-color;
 }
 
-.text-success {
+.yeah-text-success {
 	color: $success-color;
 }
 
-.text-danger {
+.yeah-text-danger {
 	color: $danger-color;
 }
 
-.bg-white {
+.yeah-bg-white {
 	background-color: $white-color;
 }
 
-.bg-black {
+.yeah-bg-black {
 	background-color: $black-color;
 }
 
-.bg-primary {
+.yeah-bg-primary {
 	background-color: $primary-color;
 }
 
-.bg-info {
+.yeah-bg-info {
 	background-color: $info-color;
 }
 
-.bg-warning {
+.yeah-bg-warning {
 	background-color: $warning-color;
 }
 
-.bg-success {
+.yeah-bg-success {
 	background-color: $success-color;
 }
 
-.bg-danger {
+.yeah-bg-danger {
 	background-color: $danger-color;
 }
 
 
-.pull-left {
+.yeah-pull-left {
 	float: left;
 }
 
-.pull-right {
+.yeah-pull-right {
 	float: right;
 }
 
 
-.show {
+.yeah-show {
 	display: block;
 }
 
-.hide {
+.yeah-hide {
 	display: none;
 }
 
-.block-center {
+.yeah-block-center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.clearfix {
+.yeah-clearfix {
   *zoom: 1; 
 }
 
-.clearfix:before,
-.clearfix:after {
+.yeah-clearfix:before,
+.yeah-clearfix:after {
   display: table;
   line-height: 0;
   content: "";
 }
 
-.clearfix:after {
+.yeah-clearfix:after {
   clear: both;
 }
+
