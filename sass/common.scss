@@ -1,12 +1,16 @@
 @import "variables", "mixin", "compass/reset";
 
-/** 滚动条样式重置 **/
+/** reset scrollbar style **/
 ::-webkit-scrollbar{width: 8px; height: 10px;}
 ::-webkit-scrollbar-button:vertical{display: none;}
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner{background-color: #e6e6e6;}
 ::-webkit-scrollbar-thumb{@include radius(10px !important); background-color: rgba(0,0,0,.3);}
 ::-webkit-scrollbar-thumb:vertical:hover{background-color: rgba(0,0,0,.35);}
 ::-webkit-scrollbar-thumb:vertical:active{background-color: rgba(0,0,0,.38);}
+
+a, a:hover {
+	text-decoration: none;
+}
 
 .yeah-text-center {
 	text-align: center;
@@ -84,6 +88,10 @@
 
 .yeah-pull-right {
 	float: right;
+}
+
+.yeah-clear {
+	clear: both;
 }
 
 

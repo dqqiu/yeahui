@@ -1,15 +1,10 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "variables", "mixin";
 
 %ft-12 {
 	font-size: 12px;
 }
 
-/* YeahUI 按钮样式 */
+/* YeahUI button style */
 .btn {
 	display: inline-block;
 	text-align: center;
@@ -41,7 +36,7 @@
 
 	&:hover {
 		background-color: $primary-color !important;
-		color: $primary-color;
+		color: $white-color;
 	}
 }
 
@@ -82,21 +77,21 @@
 }
 
 
-/* YeahUI迷你按钮 */
+/* YeahUI mini button */
 .btn-mini {
 	@extend %ft-12;
 	padding: 1px 5px;
 	line-height: 1.5;
 }
 
-/* YeahUI小型按钮 */
+/* YeahUI small button */
 .btn-small {
 	@extend %ft-12;
 	padding: 5px 10px;
 	line-height: 1.5;
 }
 
-/* YeahUI大型按钮 */
+/* YeahUI large button */
 .btn-large {
 	font-size: 16px;
 	padding: 10px 16px;
@@ -104,7 +99,7 @@
 	@include radius(5px);
 }
 
-/* YeahUI默认按钮 */
+/* YeahUI default button */
 .btn-default {
 	color: #333;
 	background-color: $white-color;
@@ -114,7 +109,7 @@
 	}
 }
 
-/* 首选按钮 */
+/* YeahUI primary button */
 .btn-primary {
 	color: $white-color;
 	@include backAndBorderColor($primary-color);
@@ -123,7 +118,7 @@
 	}
 }
 
-/* 信息按钮 */
+/* YeahUI info button */
 .btn-info {
 	color: $white-color;
 	@include backAndBorderColor($info-color);
@@ -132,7 +127,7 @@
 	}
 }
 
-/* 警告按钮 */
+/* YeahUI warning button */
 .btn-warning {
 	color: $white-color;
 	@include backAndBorderColor($warning-color);
@@ -141,7 +136,7 @@
 	}
 }
 
-/* 成功按钮 */
+/* YeahUI success button */
 .btn-success {
 	color: $white-color;
 	@include backAndBorderColor($success-color);
@@ -150,7 +145,7 @@
 	}
 }
 
-/* 危险按钮 */
+/* YeahUI danger button */
 .btn-danger {
 	color: $white-color;
 	@include backAndBorderColor($danger-color);
@@ -159,7 +154,7 @@
 	}
 }
 
-/* 链接按钮，样式类似于a标签 */
+/* YeahUI link button */
 .btn-link {
 	color: #01AAED;
 	background-color: transparent;

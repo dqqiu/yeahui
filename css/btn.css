@@ -1,15 +1,10 @@
-@charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/btn.scss */
+/* line 3, ../sass/btn.scss */
 .btn-mini, .btn-small {
   font-size: 12px;
 }
 
-/* YeahUI 按钮样式 */
-/* line 13, ../sass/btn.scss */
+/* YeahUI button style */
+/* line 8, ../sass/btn.scss */
 .btn {
   display: inline-block;
   text-align: center;
@@ -32,7 +27,7 @@
   border: 1px solid transparent;
 }
 
-/* line 31, ../sass/btn.scss */
+/* line 26, ../sass/btn.scss */
 .btn-round {
   border-radius: 100px !important;
   -o-border-radius: 100px !important;
@@ -41,77 +36,77 @@
   -webkit-border-radius: 100px !important;
 }
 
-/* line 35, ../sass/btn.scss */
+/* line 30, ../sass/btn.scss */
 .btn-blank {
   background: #FFF !important;
 }
 
-/* line 39, ../sass/btn.scss */
+/* line 34, ../sass/btn.scss */
 .btn-blank.btn-primary {
   color: #009688;
 }
-/* line 42, ../sass/btn.scss */
+/* line 37, ../sass/btn.scss */
 .btn-blank.btn-primary:hover {
   background-color: #009688 !important;
-  color: #009688;
+  color: #FFF;
 }
 
-/* line 48, ../sass/btn.scss */
+/* line 43, ../sass/btn.scss */
 .btn-blank.btn-info {
   color: #1E9FFF;
 }
-/* line 51, ../sass/btn.scss */
+/* line 46, ../sass/btn.scss */
 .btn-blank.btn-info:hover {
   background-color: #1E9FFF !important;
   color: #FFF;
 }
 
-/* line 57, ../sass/btn.scss */
+/* line 52, ../sass/btn.scss */
 .btn-blank.btn-warning {
   color: #F7B824;
 }
-/* line 60, ../sass/btn.scss */
+/* line 55, ../sass/btn.scss */
 .btn-blank.btn-warning:hover {
   background-color: #F7B824 !important;
   color: #FFF;
 }
 
-/* line 66, ../sass/btn.scss */
+/* line 61, ../sass/btn.scss */
 .btn-blank.btn-success {
   color: #5FB878;
 }
-/* line 69, ../sass/btn.scss */
+/* line 64, ../sass/btn.scss */
 .btn-blank.btn-success:hover {
   background-color: #5FB878 !important;
   color: #FFF;
 }
 
-/* line 75, ../sass/btn.scss */
+/* line 70, ../sass/btn.scss */
 .btn-blank.btn-danger {
   color: #FF5722;
 }
-/* line 78, ../sass/btn.scss */
+/* line 73, ../sass/btn.scss */
 .btn-blank.btn-danger:hover {
   background-color: #FF5722 !important;
   color: #FFF;
 }
 
-/* YeahUI迷你按钮 */
-/* line 86, ../sass/btn.scss */
+/* YeahUI mini button */
+/* line 81, ../sass/btn.scss */
 .btn-mini {
   padding: 1px 5px;
   line-height: 1.5;
 }
 
-/* YeahUI小型按钮 */
-/* line 93, ../sass/btn.scss */
+/* YeahUI small button */
+/* line 88, ../sass/btn.scss */
 .btn-small {
   padding: 5px 10px;
   line-height: 1.5;
 }
 
-/* YeahUI大型按钮 */
-/* line 100, ../sass/btn.scss */
+/* YeahUI large button */
+/* line 95, ../sass/btn.scss */
 .btn-large {
   font-size: 16px;
   padding: 10px 16px;
@@ -123,85 +118,85 @@
   -webkit-border-radius: 5px;
 }
 
-/* YeahUI默认按钮 */
-/* line 108, ../sass/btn.scss */
+/* YeahUI default button */
+/* line 103, ../sass/btn.scss */
 .btn-default {
   color: #333;
   background-color: #FFF;
   border-color: #e2e2e2;
 }
-/* line 112, ../sass/btn.scss */
+/* line 107, ../sass/btn.scss */
 .btn-default:hover {
   border-color: #CCC;
 }
 
-/* 首选按钮 */
-/* line 118, ../sass/btn.scss */
+/* YeahUI primary button */
+/* line 113, ../sass/btn.scss */
 .btn-primary {
   color: #FFF;
   border-color: #009688;
   background-color: #009688;
 }
-/* line 121, ../sass/btn.scss */
+/* line 116, ../sass/btn.scss */
 .btn-primary:hover {
   border-color: #0A9674;
   background-color: #0A9674;
 }
 
-/* 信息按钮 */
-/* line 127, ../sass/btn.scss */
+/* YeahUI info button */
+/* line 122, ../sass/btn.scss */
 .btn-info {
   color: #FFF;
   border-color: #1E9FFF;
   background-color: #1E9FFF;
 }
-/* line 130, ../sass/btn.scss */
+/* line 125, ../sass/btn.scss */
 .btn-info:hover {
   border-color: #168BFF;
   background-color: #168BFF;
 }
 
-/* 警告按钮 */
-/* line 136, ../sass/btn.scss */
+/* YeahUI warning button */
+/* line 131, ../sass/btn.scss */
 .btn-warning {
   color: #FFF;
   border-color: #F7B824;
   background-color: #F7B824;
 }
-/* line 139, ../sass/btn.scss */
+/* line 134, ../sass/btn.scss */
 .btn-warning:hover {
   border-color: #F7A91E;
   background-color: #F7A91E;
 }
 
-/* 成功按钮 */
-/* line 145, ../sass/btn.scss */
+/* YeahUI success button */
+/* line 140, ../sass/btn.scss */
 .btn-success {
   color: #FFF;
   border-color: #5FB878;
   background-color: #5FB878;
 }
-/* line 148, ../sass/btn.scss */
+/* line 143, ../sass/btn.scss */
 .btn-success:hover {
   border-color: #1DB870;
   background-color: #1DB870;
 }
 
-/* 危险按钮 */
-/* line 154, ../sass/btn.scss */
+/* YeahUI danger button */
+/* line 149, ../sass/btn.scss */
 .btn-danger {
   color: #FFF;
   border-color: #FF5722;
   background-color: #FF5722;
 }
-/* line 157, ../sass/btn.scss */
+/* line 152, ../sass/btn.scss */
 .btn-danger:hover {
   border-color: #FF290E;
   background-color: #FF290E;
 }
 
-/* 链接按钮，样式类似于a标签 */
-/* line 163, ../sass/btn.scss */
+/* YeahUI link button */
+/* line 158, ../sass/btn.scss */
 .btn-link {
   color: #01AAED;
   background-color: transparent;
@@ -212,18 +207,18 @@
   -moz-border-raduis: 0;
   -webkit-border-radius: 0;
 }
-/* line 168, ../sass/btn.scss */
+/* line 163, ../sass/btn.scss */
 .btn-link:hover {
   text-decoration: underline;
 }
 
-/* line 173, ../sass/btn.scss */
+/* line 168, ../sass/btn.scss */
 .btn-group {
   margin: 10px 0;
   clear: both;
 }
 
-/* line 178, ../sass/btn.scss */
+/* line 173, ../sass/btn.scss */
 .btn-group .btn {
   float: left;
   border-radius: 0 !important;
@@ -232,11 +227,11 @@
   -moz-border-raduis: 0 !important;
   -webkit-border-radius: 0 !important;
 }
-/* line 182, ../sass/btn.scss */
+/* line 177, ../sass/btn.scss */
 .btn-group .btn:first-child {
   border-radius: 3px 0 0 3px !important;
 }
-/* line 186, ../sass/btn.scss */
+/* line 181, ../sass/btn.scss */
 .btn-group .btn:last-child {
   border-radius: 0 3px 3px 0 !important;
 }

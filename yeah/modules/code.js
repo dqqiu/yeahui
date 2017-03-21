@@ -9,7 +9,7 @@
 		title: "yeah-code",
 		height: "auto",
 		element: ".yeah-code-box",
-		skin: "default",
+		skin: "",
 		about: "yeahui.code",
 		showRowNumber: false,
 		editable: false
@@ -20,6 +20,7 @@
 		this.elements = [];
 		this._init();
 	}
+
 
 	Code.prototype._init = function() {
 		var _this = this;
@@ -61,12 +62,12 @@
 			}
 
 			var codeBody = cthis.find(">.yeah-code-body");
-			var skin = codeBody.attr("yeah-skin") || _this.options.skin;
+			var skin = cthis.attr("yeah-skin") || _this.options.skin;
 			if(skin) {
 				cthis.addClass("yeah-code-" + skin);
 			}
 
-			if(_this.options.editable || (cthis.attr("yeah-code-editable") == "true")) {
+			if((cthis.attr("yeah-code-editable") == "true") || _this.options.editable) {
 				codeBody.attr("contenteditable", true);
 			}
 
@@ -77,7 +78,7 @@
 			}
 
 			// 是否开启行数显示
-			if(_this.options.showRowNumber || cthis.attr("yeah-type") == "row") {
+			if(cthis.attr("yeah-type") == "row" || _this.options.showRowNumber) {
 				cthis.attr("yeah-type", "row");
 			}
 
@@ -87,6 +88,8 @@
 			}
 
 			codeBody.find('li').eq(0).remove();
+
+			codeBody.find('li').eq(codeBody.find('li').length - 1).remove();
 
 		});
 	}

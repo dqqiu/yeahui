@@ -1,5 +1,27 @@
 @import "variables", "mixin";
 
+.yeah-header {
+	position: relative;
+	z-index: 1000;
+	height: 60px;
+	padding: 0 20px;
+	background-color: #393d50;
+}
+
+.yeah-header .logo {
+	font-size: 20px;
+	line-height: 60px;
+}
+
+.yeah-header * {
+	color: $white-color;
+}
+
+.yeah-header .yeah-nav{
+	@include radius(0);
+}
+
+
 .yeah-nav {
 	position: relative;
 	padding: 0 20px;

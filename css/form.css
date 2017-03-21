@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 3, ../sass/form.scss */
 .yeah-form .yeah-checkbox, .yeah-form .yeah-radio,
 .yeah-checkbox *, .yeah-radio * {
@@ -79,7 +78,7 @@
   left: -1px;
 }
 
-/* 控件组 */
+/* form-group style */
 /* line 67, ../sass/form.scss */
 .yeah-form-group {
   margin-bottom: 15px;
@@ -93,7 +92,7 @@
   position: relative;
 }
 
-/* 表单文本 */
+/* form-label style */
 /* line 79, ../sass/form.scss */
 .yeah-form-label {
   float: left;
@@ -113,7 +112,7 @@
   position: relative;
 }
 
-/* input输入框 */
+/* form-input style */
 /* line 98, ../sass/form.scss */
 .yeah-input {
   display: block;
@@ -144,7 +143,7 @@
   cursor: not-allowed;
 }
 
-/* 文本域 */
+/* form-textarea style */
 /* line 124, ../sass/form.scss */
 .yeah-textarea {
   min-height: 100px;
@@ -167,7 +166,7 @@
   border-color: #d2d2d2;
 }
 
-/* 下拉框 */
+/* form-select style */
 /* line 143, ../sass/form.scss */
 .yeah-select {
   position: relative;
@@ -237,7 +236,7 @@
   display: block;
 }
 
-/* 多选框 */
+/* form-checkbox style */
 /* line 208, ../sass/form.scss */
 .yeah-checkbox {
   position: relative;
@@ -311,7 +310,7 @@
   top: 0;
 }
 
-/* 原生多选框 */
+/* form-checkbox original style */
 /* line 274, ../sass/form.scss */
 .yeah-checkbox.yeah-original {
   height: auto !important;
@@ -355,7 +354,7 @@
   border-color: #009688;
 }
 
-/* 单选按钮 */
+/* form-radio style */
 /* line 313, ../sass/form.scss */
 .yeah-radio {
   padding: 6px 10px 0 0;
@@ -417,4 +416,18 @@
   font-size: 20px;
   margin-left: 30px;
   font-weight: 300;
+}
+
+/* line 370, ../sass/form.scss */
+.yeah-fieldset-original {
+  border: 1px solid #e2e2e2;
+  padding: 9px 15px;
+  margin-bottom: 10px;
+}
+/* line 375, ../sass/form.scss */
+.yeah-fieldset-original legend {
+  margin-left: 20px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 400;
 }

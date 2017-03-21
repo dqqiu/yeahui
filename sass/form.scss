@@ -63,7 +63,7 @@
 	left: -1px;
 }
 
-/* 控件组 */
+/* form-group style */
 .yeah-form-group {
 	margin-bottom: 15px;
 	clear: both;
@@ -75,7 +75,7 @@
 	position: relative;
 }
 
-/* 表单文本 */
+/* form-label style */
 .yeah-form-label {
 	float: left;
 	display: block;
@@ -94,7 +94,7 @@
     position: relative;
 }
 
-/* input输入框 */
+/* form-input style */
 .yeah-input {
 	display: block;
 	width: 100%;
@@ -120,7 +120,7 @@
 	}
 }
 
-/* 文本域 */
+/* form-textarea style */
 .yeah-textarea {
 	min-height: 100px;
 	height: auto;
@@ -139,7 +139,7 @@
 	}
 }
 
-/* 下拉框 */
+/* form-select style */
 .yeah-select {
 	position: relative;
 
@@ -204,7 +204,7 @@
 
 }
 
-/* 多选框 */
+/* form-checkbox style */
 .yeah-checkbox {
 	position: relative;
 	height: 30px;
@@ -270,7 +270,7 @@
 	}
 }
 
-/* 原生多选框 */
+/* form-checkbox original style */
 .yeah-checkbox.yeah-original {
 	height: auto!important;
 	line-height: normal !important;
@@ -309,7 +309,7 @@
 	}
 }
 
-/* 单选按钮 */
+/* form-radio style */
 .yeah-radio {
 	padding: 6px 10px 0 0;
 	line-height: 28px;
@@ -367,3 +367,15 @@
 	font-weight: 300;
 }
 
+.yeah-fieldset-original {
+	border: 1px solid #e2e2e2;
+	padding: 9px 15px;
+	margin-bottom: 10px;
+
+	legend {
+		margin-left: 20px;
+		padding: 0 10px;
+		font-size: 18px;
+		font-weight: 400;
+	}
+}

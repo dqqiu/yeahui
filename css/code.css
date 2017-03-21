@@ -10,19 +10,18 @@
   font-family: Courier New;
   line-height: 20px;
   white-space: nowrap;
-  border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -moz-border-raduis: 5px;
-  -webkit-border-radius: 5px;
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-raduis: 3px;
+  -webkit-border-radius: 3px;
   box-sizing: border-box !important;
   -o-box-sizing: border-box !important;
   -ms-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   -webkit-box-sizing: border-box !important;
 }
-
-/* line 19, ../sass/code.scss */
+/* line 18, ../sass/code.scss */
 .yeah-code-box .yeah-code-title {
   position: relative;
   font-size: 12px;
@@ -32,7 +31,7 @@
   line-height: 30px;
   border-bottom: 1px solid #31312f;
 }
-/* line 27, ../sass/code.scss */
+/* line 26, ../sass/code.scss */
 .yeah-code-box .yeah-code-title a {
   position: absolute;
   right: 10px;
@@ -40,14 +39,16 @@
   color: #999;
   text-decoration: none;
 }
-
-/* line 36, ../sass/code.scss */
+/* line 35, ../sass/code.scss */
 .yeah-code-box .yeah-code-body {
   position: relative;
   overflow: auto;
   outline: none;
+  font-size: 12px;
+  background-color: #272822;
+  color: #e6db74;
 }
-/* line 41, ../sass/code.scss */
+/* line 42, ../sass/code.scss */
 .yeah-code-box .yeah-code-body li {
   position: relative;
   margin-left: 0;
@@ -55,13 +56,32 @@
   line-height: 20px;
   border-left: 1px solid #31312f;
   list-style-type: decimal-leading-zero;
-  background-color: #272822;
   white-space: pre-wrap;
   word-wrap: break-word;
-  color: #e6db74;
 }
 
 /* line 55, ../sass/code.scss */
+.yeah-code-github {
+  background-color: #fafbfc !important;
+  border: 1px solid #e1e4e8 !important;
+  border-left: 1px solid #e1e4e8 !important;
+}
+/* line 60, ../sass/code.scss */
+.yeah-code-github .yeah-code-title {
+  color: #333;
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+/* line 65, ../sass/code.scss */
+.yeah-code-github .yeah-code-body {
+  background-color: #FFF;
+  color: #333;
+}
+/* line 69, ../sass/code.scss */
+.yeah-code-github .yeah-code-body li {
+  border-left: none !important;
+}
+
+/* line 75, ../sass/code.scss */
 .yeah-code-box[yeah-type="row"] .yeah-code-body li {
   margin-left: 50px;
 }

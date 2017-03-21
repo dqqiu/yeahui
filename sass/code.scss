@@ -12,43 +12,63 @@
 	line-height: 20px;
 	white-space: nowrap;
 
-	@include radius(5px);
+	@include radius();
 	@include boxSizing(border-box !important);
-}
 
-.yeah-code-box .yeah-code-title {
-	position: relative;
-	font-size: 12px;
-	font-weight: 700;
-	padding: 0 10px;
-	height: 30px;
-	line-height: 30px;
-	border-bottom: 1px solid #31312f;
-	a { 
-		position: absolute;
-		right: 10px;
-		top: 0;
-		color: #999;
-		text-decoration: none;
+	.yeah-code-title {
+		position: relative;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 0 10px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #31312f;
+		a { 
+			position: absolute;
+			right: 10px;
+			top: 0;
+			color: #999;
+			text-decoration: none;
+		}
+	}
+
+	.yeah-code-body {
+		position: relative;
+		overflow: auto;
+		outline: none;
+		font-size: 12px;
+		background-color: #272822;
+		color: #e6db74;
+		li {
+			position: relative;
+			margin-left: 0;
+			padding: 0 8px;
+			line-height: 20px;
+			border-left: 1px solid #31312f;
+			list-style-type: decimal-leading-zero;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
 	}
 }
 
-.yeah-code-box .yeah-code-body {
-	position: relative;
-	overflow: auto;
-	outline: none;
+.yeah-code-github {
+	background-color: #fafbfc !important;
+	border: 1px solid #e1e4e8 !important;
+	border-left: 1px solid #e1e4e8 !important;
 
-	li {
-		position: relative;
-		margin-left: 0;
-		padding: 0 8px;
-		line-height: 20px;
-		border-left: 1px solid #31312f;
-		list-style-type: decimal-leading-zero;
-		background-color: #272822;
-		white-space: pre-wrap;
-		word-wrap: break-word;
-		color: #e6db74;
+	.yeah-code-title {
+		color: $black-color;
+		border-bottom: 1px solid #e1e4e8 !important;
+	}
+
+	.yeah-code-body {
+		background-color: $white-color;
+		color: $black-color;
+
+		li {
+			border-left: none !important;
+		}
 	}
 }
 

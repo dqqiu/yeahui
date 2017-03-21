@@ -1,4 +1,4 @@
-// 圆角边框设置
+
 @mixin radius($width: 3px) {
 	border-radius: $width;
 	-o-border-radius: $width;
@@ -7,7 +7,7 @@
 	-webkit-border-radius: $width;
 }
 
-// 背景色和边框色设置
+
 @mixin backAndBorderColor($color) {
 	border-color: $color;
 	background-color: $color;
