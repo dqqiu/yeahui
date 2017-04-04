@@ -10339,7 +10339,9 @@ if ( typeof noGlobal === strundefined ) {
 }
 
 
-
+yeahui.define(function(exports) {
+	exports("jquery", jQuery);
+});
 
 return jQuery;
 

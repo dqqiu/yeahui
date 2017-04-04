@@ -1,0 +1,147 @@
+@import "variables", "mixin";
+
+.yeah-message {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	font-size: 14px;
+	width: 300px;
+	height: 200px;
+	@include radius();
+	box-shadow: 1px 1px 36px rgba(0, 0, 0, .3);
+	background-color: $white-color;
+
+	.yeah-message-header {
+		line-height: 40px;
+		background-color: #F8F8F8;
+		color: $default-color;
+		clear: both;
+		border-bottom: 1px solid #eee;
+		cursor: move;
+
+		.yeah-message-title {
+			padding-left: 20px;
+		}
+
+		.yeah-message-control {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 10px;
+
+			i {
+				cursor: pointer;
+				margin-left: 6px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.yeah-message-content {
+		overflow: auto;
+		position: relative;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.yeah-message-btns {
+		text-align: center;
+		padding: 10px 20px;
+		width: 100%;
+	    position: absolute;
+	    bottom: 0;
+	    @include boxSizing(border-box);
+
+		.btn {
+			margin: 0 6px;
+		}
+	}
+}
+
+.yeah-resize-left-top {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: nw-resize;
+}
+
+.yeah-resize-top {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: row-resize;
+}
+
+.yeah-resize-right-top {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: nesw-resize;
+}
+
+.yeah-resize-right {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: col-resize;
+}
+
+.yeah-resize-right-bottom {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	cursor: se-resize;
+}
+
+.yeah-resize-bottom {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: row-resize;
+}
+
+.yeah-resize-left-bottom {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	cursor: sw-resize;
+}
+
+.yeah-resize-left {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: col-resize;
+}
+
+.yeah-message-mode {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #000;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+	position: fixed;
+	z-index: 999998;
+}
+
+
+

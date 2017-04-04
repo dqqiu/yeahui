@@ -10,15 +10,17 @@
 /* line 11, ../sass/component.scss */
 .yeah-header .logo {
   font-size: 20px;
-  line-height: 60px;
+  position: relative;
+  top: 14px;
+  left: 0;
 }
 
-/* line 16, ../sass/component.scss */
+/* line 18, ../sass/component.scss */
 .yeah-header * {
   color: #FFF;
 }
 
-/* line 20, ../sass/component.scss */
+/* line 22, ../sass/component.scss */
 .yeah-header .yeah-nav {
   border-radius: 0;
   -o-border-radius: 0;
@@ -27,7 +29,7 @@
   -webkit-border-radius: 0;
 }
 
-/* line 25, ../sass/component.scss */
+/* line 27, ../sass/component.scss */
 .yeah-nav {
   position: relative;
   padding: 0 20px;
@@ -46,7 +48,7 @@
   -webkit-box-sizing: border-box !important;
 }
 
-/* line 35, ../sass/component.scss */
+/* line 37, ../sass/component.scss */
 .yeah-nav .yeah-nav-item {
   position: relative;
   display: inline-block;
@@ -54,11 +56,12 @@
   line-height: 60px;
 }
 
-/* line 42, ../sass/component.scss */
+/* line 44, ../sass/component.scss */
 .yeah-nav .yeah-nav-item a {
   display: block;
   padding: 0 20px;
   color: #c2c2c2;
+  cursor: pointer;
   transition: all .3s;
   -o-transition: all .3s;
   -ms-transition: all .3s;
@@ -68,14 +71,14 @@
   text-decoration: none;
 }
 
-/* line 57, ../sass/component.scss */
+/* line 58, ../sass/component.scss */
 .yeah-nav .yeah-active a,
-.yeah-nav .yeah-nav-item:hover a {
+.yeah-nav .yeah-nav-item a:hover {
   color: #FFF;
 }
-/* line 60, ../sass/component.scss */
-.yeah-nav .yeah-active:after,
-.yeah-nav .yeah-nav-item:hover:after {
+/* line 61, ../sass/component.scss */
+.yeah-nav .yeah-active a:after,
+.yeah-nav .yeah-nav-item a:hover:after {
   content: '';
   position: absolute;
   left: 0;
@@ -90,7 +93,82 @@
   -webkit-transition: all .3s;
 }
 
-/* line 76, ../sass/component.scss */
+/* line 77, ../sass/component.scss */
 .yeah-nav * {
   font-size: 14px;
+}
+
+/* line 82, ../sass/component.scss */
+.yeah-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 220px;
+  overflow-x: hidden;
+  background-color: #23262E;
+}
+/* line 92, ../sass/component.scss */
+.yeah-aside .yeah-nav-scroll-bar {
+  width: 240px;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* line 99, ../sass/component.scss */
+.yeah-aside .yeah-nav {
+  padding: 0;
+  width: 220px;
+}
+/* line 104, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a {
+  padding-left: 20px;
+}
+/* line 112, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-child .yeah-nav-item a {
+  line-height: 42px;
+  padding-left: 40px;
+}
+/* line 115, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-child .yeah-nav-item a:hover {
+  color: #FFF;
+  background-color: #009688;
+}
+/* line 119, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-child .yeah-nav-item a:hover:after {
+  background-color: transparent;
+  height: 0;
+}
+/* line 127, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item {
+  display: block;
+  position: relative;
+}
+/* line 133, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a {
+  display: block;
+  cursor: pointer;
+}
+/* line 136, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a:hover {
+  color: #FFF;
+}
+/* line 139, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a:hover:after {
+  height: 0;
+  background-color: transparent;
+}
+/* line 147, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a {
+  height: 42px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 42px;
+}
+/* line 155, ../sass/component.scss */
+.yeah-aside .yeah-nav .yeah-nav-item a i.yeah-nav-sub {
+  position: absolute;
+  right: 10px;
+  top: 14px;
 }

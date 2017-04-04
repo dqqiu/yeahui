@@ -6,20 +6,59 @@
 	<title>YeahUI</title>
 	<link rel="stylesheet" type="text/css" href="css/yeahui.css">
 	<link rel="stylesheet" type="text/css" href="css/sample.css">
-	<style type="text/css">
-		body {
-			font-size: 12px;
-		}
-		.sample div {
-			margin-bottom: 10px;
-		}
-	</style>
+	<script type="text/javascript" src="yeah.js"></script>
+	<script type="text/javascript">
+
+		yeahui.require(["jquery","ccode", "message"], function(exports) {
+			var ccode = yeahui.ccode(),
+				message = yeahui.message();
+
+			console.log(message);
+
+			message.alert("成功了", {
+				title : "温馨提示",
+				btnText : ["我知道了", "hahha"],
+				draggable : true,
+				resizeable : true,
+				align : "center" 
+			},[
+				function() {
+					alert(1);
+				}
+			]);
+			console.log(ccode);
+
+			ccode.render(".code-box", {
+				encode : true
+			});
+
+			ccode.render(".code-box-2", {
+				encode : true,
+				skin : "github",
+				showRowNumber : true
+			});
+			var $ = yeahui.jquery;
+			$(function() {
+				$("#message").on("click", function() {
+					message.alert("成功了");
+				});
+			});
+		});
+
+
+		yeahui.foreach(yeahui.getModules(), function(index, item, key) {
+			console.log(index + ":" + item + ":" + key);
+		});
+
+
+
+	</script>
 </head>
 <body>
 	<div class="yeah-header">
 		<div>
 			<a class="logo" href="#">
-				YeahUI
+				<image src="images/logo.png" alt="YeahUI"/>
 			</a>
 			<ul class="yeah-nav yeah-pull-right">
 				<li class="yeah-nav-item yeah-active">
@@ -38,533 +77,83 @@
 		</div>
 	</div>
 
-	<fieldset class="yeah-fieldset">
-		<legend>
-			按钮演示
-		</legend>
-	</fieldset>
-
-	<div class="sample">
-		<button class="btn btn-default">正常默认按钮</button>
-		<button class="btn btn-primary">正常首选按钮</button>
-		<button class="btn btn-info btn-small btn-blank">小型信息空心按钮</button>
-		<button class="btn btn-warning btn-mini">迷你警告按钮</button>
-		<button class="btn btn-success btn-large">大型成功按钮</button>
-		<button class="btn btn-danger btn-large btn-round">大型危险圆角按钮</button>
-		<button class="btn btn-warning btn-large btn-round btn-blank">大型危险圆角空心按钮</button>
-		<button class="btn btn-link">正常链接按钮</button>
-		<div class="yeah-clearfix">
-			<div class="btn-group">
-				<button class="btn btn-default">按钮1</button>
-				<button class="btn btn-primary">按钮2</button>
-				<button class="btn btn-info">按钮3</button>
-				<button class="btn btn-warning">按钮4</button>
-				<button class="btn btn-success">按钮5</button>
-				<button class="btn btn-danger">按钮6</button>
+	<div class="sample-container">
+		<div class="yeah-aside">
+			<div class="yeah-nav-scroll-bar">
+				<ul class="yeah-nav">
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+						<ul class="yeah-nav-child">
+							<li class="yeah-nav-item">
+								<a>真是的</a>
+							</li>
+							<li class="yeah-nav-item">
+								<a>真是的</a>
+							</li>
+							<li class="yeah-nav-item">
+								<a>真是的</a>
+							</li>
+						</ul>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+					<li class="yeah-nav-item">
+						<a>示例<i class="icon icon-chevron-down yeah-nav-sub"></i></a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 
-	<fieldset class="yeah-fieldset">
-		<legend>
-			按钮演示源代码
-		</legend>
-	</fieldset>
-
-	<pre class="yeah-code-box" yeah-title="按钮样式源代码" yeah-type="row" yeah-height="100px" yeah-code-encode="true">
-		<button class="btn btn-default">正常默认按钮</button>
-		<button class="btn btn-primary">正常首选按钮</button>
-		<button class="btn btn-info btn-small btn-blank">小型信息空心按钮</button>
-		<button class="btn btn-warning btn-mini">迷你警告按钮</button>
-		<button class="btn btn-success btn-large">大型成功按钮</button>
-		<button class="btn btn-danger btn-large btn-round">大型危险圆角按钮</button>
-		<button class="btn btn-warning btn-large btn-round btn-blank">大型危险圆角空心按钮</button>
-		<button class="btn btn-link">正常链接按钮</button>
-		<div class="yeah-clearfix">
-		  <div class="btn-group">
-		    <button class="btn btn-default">按钮1</button>
-		    <button class="btn btn-primary">按钮2</button>
-		    <button class="btn btn-info">按钮3</button>
-		    <button class="btn btn-warning">按钮4</button>
-		    <button class="btn btn-success">按钮5</button>
-		    <button class="btn btn-danger">按钮6</button>
-		  </div>
-		</div>
-	</pre>
-
-	<fieldset class="yeah-fieldset">
-		<legend>
-			表单样式演示
-		</legend>
-	</fieldset>
-
-	<form class="yeah-form">
-		<div class="yeah-form-group">
-			<label class="yeah-form-label">用户名</label>
-			<div class="yeah-form-wrapper">
-				<input type="text" placeholder="请输入用户名" class="yeah-input" disabled="disabled">
-			</div>
-		</div>
-		<div class="yeah-form-group">
-	        <label class="yeah-form-label">性别</label>
-	        <div class="yeah-form-wrapper">
-	            <div class="yeah-radio yeah-checked">
-	                <i class="icon-circle"></i>
-	                <span>男生</span>
-	            </div>
-	            <div class="yeah-radio">
-	                <i class="icon-circle"></i>
-	                <span>女生</span>
-	            </div>
-	            <div class="yeah-radio yeah-disabled">
-	                <i class="icon-circle"></i>
-	                <span>未知</span>
-	            </div>
-	        </div>
-	    </div>
-
-		<div class="yeah-form-group">
-			<label class="yeah-form-label">兴趣多选</label>
-			<div class="yeah-form-wrapper">
-				<div class="yeah-checkbox">
-					<span>阅读</span>
-					<i class="icon-ok"></i>
-				</div>
-				<div class="yeah-checkbox">
-					<span>唱歌</span>
-					<i class="icon-ok"></i>
-				</div>
-				<div class="yeah-checkbox yeah-checked">
-					<span>画画</span>
-					<i class="icon-ok"></i>
-				</div>
-			</div>
-		</div>
-
-		<div class="yeah-form-group">
-			<label class="yeah-form-label">兴趣多选</label>
-			<div class="yeah-form-wrapper">
-				<div class="yeah-checkbox yeah-original">
-					<span>阅读</span>
-					<i class="icon-ok"></i>
-				</div>
-				<div class="yeah-checkbox yeah-original yeah-checked">
-					<span>画画</span>
-					<i class="icon-ok"></i>
-				</div>
-			</div>
-		</div>
-
-		<div class="yeah-form-group">
-	        <label class="yeah-form-label">选择框</label>
-	        <div class="yeah-form-wrapper">
-	            <div class="yeah-select">
-	                <div class="yeah-select-title">
-	                    <input type="text" placeholder="请选择省市" class="yeah-input"/><i class="icon-caret-down"></i>
-	                </div>
-	                <dl class="yeah-select-options">
-	                    <dd label-value="请选择">请选择</dd>
-	                    <dd label-value="北京市" class="yeah-current">北京市</dd>
-	                    <dd label-value="天津市">天津市</dd>
-	                    <dd label-value="浙江省">浙江省</dd>
-	                </dl>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="yeah-form-group">
-	        <label class="yeah-form-label">简介</label>
-	        <div class="yeah-form-wrapper">
-	            <textarea class="yeah-textarea"></textarea>
-	        </div>
-	    </div>
-
-	</form>
-
-	<fieldset class="yeah-fieldset">
-		<legend>
-			行内表单演示
-		</legend>
-	</fieldset>
-
-	<form class="yeah-form yeah-form-panel">
-		<div class="yeah-form-group">
-			<label class="yeah-form-label">用户名</label>
-			<div class="yeah-form-wrapper">
-				<input type="text" placeholder="请输入用户名" class="yeah-input">
-			</div>
-		</div>
-
-		<div class="yeah-form-group">
-			<div class="yeah-inline">
-				<label class="yeah-form-label">密码</label>
-				<div class="yeah-input-inline">
-					<input type="password" placeholder="请输入您的密码" maxlength="20" class="yeah-input">
-				</div>
-				<div class="yeah-form-placeholder">请输入6-20位字符</div>
-			</div>
-		</div>
-		<div class="yeah-form-group">
-			<div class="yeah-inline">
-				<label class="yeah-form-label">电话号码</label>
-				<div class="yeah-input-inline">
-					<input type="text" placeholder="请输入您的密码" class="yeah-input">
-				</div>
-			</div>
-			<div class="yeah-inline">
-				<label class="yeah-form-label">电话号码</label>
-				<div class="yeah-input-inline">
-					<input type="text" placeholder="请输入您的密码" class="yeah-input">
-				</div>
-			</div>
-			<div class="yeah-inline">
-				<label class="yeah-form-label">电话号码</label>
-				<div class="yeah-input-inline">
-					<input type="text" placeholder="请输入您的密码" class="yeah-input">
-				</div>
-			</div>
-		</div>
-	</form>
-
-	<fieldset class="yeah-fieldset">
-		<legend>
-			行内表单演示源代码
-		</legend>
-	</fieldset>
-
-	<pre class="yeah-code-box" yeah-title="行内表单演示源代码" yeah-code-encode="true" yeah-type="row" yeah-code-height="100">
-		<form class="yeah-form yeah-form-panel">
-			<div class="yeah-form-group">
-				<label class="yeah-form-label">用户名</label>
-				<div class="yeah-form-wrapper">
-					<input type="text" placeholder="请输入用户名" class="yeah-input">
-				</div>
-			</div>
-
-			<div class="yeah-form-group">
-				<div class="yeah-inline">
-					<label class="yeah-form-label">密码</label>
-					<div class="yeah-input-inline">
-						<input type="password" placeholder="请输入您的密码" maxlength="20" class="yeah-input">
-					</div>
-					<div class="yeah-form-placeholder">请输入6-20位字符</div>
-				</div>
-			</div>
-			<div class="yeah-form-group">
-				<div class="yeah-inline">
-					<label class="yeah-form-label">电话号码</label>
-					<div class="yeah-input-inline">
-						<input type="text" placeholder="请输入您的密码" class="yeah-input">
-					</div>
-				</div>
-				<div class="yeah-inline">
-					<label class="yeah-form-label">电话号码</label>
-					<div class="yeah-input-inline">
-						<input type="text" placeholder="请输入您的密码" class="yeah-input">
-					</div>
-				</div>
-				<div class="yeah-inline">
-					<label class="yeah-form-label">电话号码</label>
-					<div class="yeah-input-inline">
-						<input type="text" placeholder="请输入您的密码" class="yeah-input">
-					</div>
-				</div>
-			</div>
-		</form>
-	</pre>
-
-	<fieldset class="yeah-fieldset">
-		<legend>
-			代码块演示
-		</legend>
-	</fieldset>
-
-	<div>
-		<pre class="yeah-code-box" yeah-title="Java代码示例">
-				package org.spirit.yeah.ui;
-				public class CodeTest {
-				  public static void main(String[] args) {
-				    System.out.println("Yeah code test!!!");
-				  }
-				}
-		</pre>
-
-		<pre class="yeah-code-box" yeah-type="row" yeah-code-editable="true">
-				package org.spirit.yeah.ui;
-				public class CodeTest {
-				  public static void main(String[] args) {
-				    System.out.println("Yeah code test!!!");
-				  }
-				}
-		</pre>
-	</div>
-
-	<fieldset class="yeah-fieldset">
-		<legend>
-			表格演示
-		</legend>
-	</fieldset>
-	<div>
-		<table class="yeah-table">
-			<thead>
-				<tr>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>年龄</th>
-					<th>手机</th>
-					<th>邮箱</th>
-					<th>地址</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="yeah-table" yeah-type="no-line">
-			<thead>
-				<tr>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>年龄</th>
-					<th>手机</th>
-					<th>邮箱</th>
-					<th>地址</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="yeah-table" yeah-type="row-line">
-			<thead>
-				<tr>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>年龄</th>
-					<th>手机</th>
-					<th>邮箱</th>
-					<th>地址</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="yeah-table yeah-table-zebra" yeah-type="column-line">
-			<thead>
-				<tr>
-					<th>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</th>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>年龄</th>
-					<th>手机</th>
-					<th>邮箱</th>
-					<th>地址</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</td>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</td>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</td>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</td>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="yeah-checkbox yeah-original">
-							<span></span>
-							<i class="icon-ok"></i>
-						</div>
-					</td>
-					<td>张三</td>
-					<td>男</td>
-					<td>22</td>
-					<td>18410077304</td>
-					<td>842276463@qq.com</td>
-					<td>北京市昌平区回龙观</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<script type="text/javascript" src="yeah/modules/jquery.js"></script>
-	<script type="text/javascript" src="yeah/modules/code.js"></script>
-	<script type="text/javascript">
-		$(document).code({});
-	</script>
+	<button class="btn btn-primary" id="message" style="margin-left: 220px;">弹出层</button>
 </body>
 </html>

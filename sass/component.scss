@@ -10,7 +10,9 @@
 
 .yeah-header .logo {
 	font-size: 20px;
-	line-height: 60px;
+	position: relative;
+	top: 14px;
+	left: 0;
 }
 
 .yeah-header * {
@@ -43,6 +45,7 @@
 	display: block;
 	padding: 0 20px;
 	color: #c2c2c2;
+	cursor: pointer;
 	transition: all .3s;
 	-o-transition: all .3s;
 	-ms-transition: all .3s;
@@ -52,11 +55,9 @@
 	text-decoration: none;
 }
 
-.yeah-nav .yeah-active,
-.yeah-nav .yeah-nav-item:hover {
-	a {
-		color: $white-color;
-	}
+.yeah-nav .yeah-active a,
+.yeah-nav .yeah-nav-item a:hover {
+	color: $white-color;
 	&:after {
 		content: '';
 		position: absolute;
@@ -76,3 +77,95 @@
 .yeah-nav * {
 	font-size: 14px;
 }
+
+
+.yeah-aside {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 220px;
+	overflow-x: hidden;
+	background-color: #23262E;
+
+	.yeah-nav-scroll-bar {
+		width: 240px;
+		height: 100%;
+		overflow-x: hidden;
+	}
+
+
+	.yeah-nav {
+		padding: 0;
+		width: 220px;
+
+		.yeah-nav-item {
+			a {
+				padding-left: 20px;
+			}
+			
+		}
+
+		.yeah-nav-child {
+
+			.yeah-nav-item a {
+				line-height: 42px;
+				padding-left: 40px;
+				&:hover {
+					color: $white-color;
+					background-color: $primary-color;
+
+					&:after {
+						background-color: transparent;
+						height: 0;
+					}
+				}
+			}
+		}
+
+		.yeah-nav-item {
+			display: block;
+			position: relative;
+		}
+
+
+		.yeah-nav-item a{
+			display: block;
+			cursor: pointer;
+			&:hover {
+				color: $white-color;
+
+				&:after {
+					height: 0;
+					background-color: transparent;
+				}
+			}
+			
+		}
+
+		.yeah-nav-item a {
+			height: 42px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			line-height: 42px;
+
+
+			i.yeah-nav-sub {
+				position: absolute;
+				right: 10px;
+				top: 14px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

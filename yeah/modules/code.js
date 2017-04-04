@@ -1,4 +1,5 @@
 ;(function(window, $, undefined) {
+;(function(window, $, undefined) {
 	"use strict";
 
 	var about = "https://dqqiu.github.io/yeahui";
