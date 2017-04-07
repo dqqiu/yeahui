@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, D:/utils/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -1265,8 +1265,9 @@ table .yeah-checkbox {
   -webkit-border-radius: 3px;
   box-shadow: 1px 1px 36px rgba(0, 0, 0, 0.3);
   background-color: #FFF;
+  overflow: hidden;
 }
-/* line 15, ../sass/message.scss */
+/* line 16, ../sass/message.scss */
 .yeah-message .yeah-message-header {
   line-height: 40px;
   background-color: #F8F8F8;
@@ -1275,49 +1276,47 @@ table .yeah-checkbox {
   border-bottom: 1px solid #eee;
   cursor: move;
 }
-/* line 23, ../sass/message.scss */
+/* line 24, ../sass/message.scss */
 .yeah-message .yeah-message-header .yeah-message-title {
   padding-left: 20px;
 }
-/* line 27, ../sass/message.scss */
+/* line 28, ../sass/message.scss */
 .yeah-message .yeah-message-header .yeah-message-control {
   display: inline-block;
   position: absolute;
   top: 0;
   right: 10px;
 }
-/* line 33, ../sass/message.scss */
+/* line 34, ../sass/message.scss */
 .yeah-message .yeah-message-header .yeah-message-control i {
   cursor: pointer;
   margin-left: 6px;
   font-size: 16px;
 }
-/* line 41, ../sass/message.scss */
+/* line 42, ../sass/message.scss */
 .yeah-message .yeah-message-content {
   overflow: auto;
   position: relative;
   padding: 20px;
   text-align: center;
 }
-/* line 48, ../sass/message.scss */
+/* line 49, ../sass/message.scss */
 .yeah-message .yeah-message-btns {
   text-align: center;
   padding: 10px 20px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-/* line 56, ../sass/message.scss */
+/* line 55, ../sass/message.scss */
 .yeah-message .yeah-message-btns .btn {
   margin: 0 6px;
 }
 
-/* line 62, ../sass/message.scss */
+/* line 61, ../sass/message.scss */
 .yeah-resize-left-top {
   width: 15px;
   height: 15px;
@@ -1327,7 +1326,7 @@ table .yeah-checkbox {
   cursor: nw-resize;
 }
 
-/* line 71, ../sass/message.scss */
+/* line 70, ../sass/message.scss */
 .yeah-resize-top {
   width: 15px;
   height: 15px;
@@ -1337,7 +1336,7 @@ table .yeah-checkbox {
   cursor: row-resize;
 }
 
-/* line 80, ../sass/message.scss */
+/* line 79, ../sass/message.scss */
 .yeah-resize-right-top {
   width: 15px;
   height: 15px;
@@ -1347,7 +1346,7 @@ table .yeah-checkbox {
   cursor: nesw-resize;
 }
 
-/* line 89, ../sass/message.scss */
+/* line 88, ../sass/message.scss */
 .yeah-resize-right {
   width: 15px;
   height: 15px;
@@ -1357,7 +1356,7 @@ table .yeah-checkbox {
   cursor: col-resize;
 }
 
-/* line 98, ../sass/message.scss */
+/* line 97, ../sass/message.scss */
 .yeah-resize-right-bottom {
   width: 15px;
   height: 15px;
@@ -1367,7 +1366,7 @@ table .yeah-checkbox {
   cursor: se-resize;
 }
 
-/* line 107, ../sass/message.scss */
+/* line 106, ../sass/message.scss */
 .yeah-resize-bottom {
   width: 15px;
   height: 15px;
@@ -1377,7 +1376,7 @@ table .yeah-checkbox {
   cursor: row-resize;
 }
 
-/* line 116, ../sass/message.scss */
+/* line 115, ../sass/message.scss */
 .yeah-resize-left-bottom {
   width: 15px;
   height: 15px;
@@ -1387,7 +1386,7 @@ table .yeah-checkbox {
   cursor: sw-resize;
 }
 
-/* line 125, ../sass/message.scss */
+/* line 124, ../sass/message.scss */
 .yeah-resize-left {
   width: 15px;
   height: 15px;
@@ -1397,7 +1396,7 @@ table .yeah-checkbox {
   cursor: col-resize;
 }
 
-/* line 134, ../sass/message.scss */
+/* line 133, ../sass/message.scss */
 .yeah-message-mode {
   width: 100%;
   height: 100%;

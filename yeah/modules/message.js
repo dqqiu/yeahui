@@ -194,6 +194,11 @@ yeahui.define("jquery", function(exports) {
 				bindDrag($message);
 			}
 
+			resize($message[0], $top[0], true, false, false, true, 200,42);
+			resize($message[0], $bottom[0], true, false, false, false, 200, 42);
+			resize($message[0], $left[0], false, true, true, false, 200, 42);
+			resize($message[0], $right[0], false, true, false, false, 200, 42);
+
 			var $mode = $("<div class='yeah-message-mode'></div>").appendTo($("body"));
 			if(!options || options.align == "center") {
 				screenCenter($message);
@@ -247,6 +252,137 @@ yeahui.define("jquery", function(exports) {
 			};
 		};
 	}
+
+
+
+	function resize(parent, target, lockX, lockY, isLeft, isTop, minWidth, minHeight) {
+		var isResize = false;
+		target.onmousedown = function(e) {
+			var event = e || window.event;
+			isResize = true;
+			var resizeX = event.clientX - parent.offsetLeft;
+			var resizeY = event.clientY - parent.offsetTop;
+			var sourceLeft = parent.offsetLeft;
+			var sourceTop = parent.offsetTop;
+			var offsetWidth = parent.offsetWidth;
+			var offsetHeight = parent.offsetHeight;
+			var clientWidth = document.documentElement.clientWidth;
+			var clientHeight = document.documentElement.clientHeihgt;
+
+			document.onmousemove = function(e) {
+				var event = e || window.event;
+				// xDiff>0 ? 左 : 右
+				var positionX = e.clientX - resizeX;
+				// yDiff>0 ? 上 : 下
+				var positionY = e.clientY - resizeY;
+				console.log(clientHeight + ":" + positionY);
+				positionX = positionX <= 0 ? 0 : positionX;
+				positionX = positionX >= clientWidth ? clientWidth : positionX;
+				positionY <= 0 && (positionY = 0);
+				positionY >= clientHeight && (positionY = clientHeight);
+
+				
+
+				var xDiff = sourceLeft - positionX; 
+				var yDiff = sourceTop - positionY; 
+				if(isResize) {
+					if(!lockY) {
+						
+						if(isTop) {
+							var tHeight = (offsetHeight + yDiff);
+							if(tHeight >= minHeight) {
+								parent.style.top = positionY + "px";
+								parent.style.height = tHeight + "px";
+							}
+						} else if(!isTop) {
+							var tHeight = (offsetHeight - yDiff);
+							if(tHeight >= minHeight) {
+								parent.style.top = sourceTop;
+								parent.style.height = tHeight + "px";
+							}
+						}
+					}
+
+					if(!lockX) {
+						if(isLeft) {
+
+						}
+					}
+				}
+			}
+
+			document.onmouseup = function(e) {
+				var event = e || window.event;
+				isResize = false;
+				document.onmousemove = null;
+				document.onmouseup = null;
+			}
+		}
+	}
+
+
+	// function resize(parent, target, lockX, lockY, isLeft, isTop) {
+	// 	var isResize = false;
+	// 	target.onmousedown = function(e) {
+	// 		var event = e || window.event;
+	// 		isResize = true;
+	// 		var sourceX = event.clientX;
+	// 		var sourceY = event.clientY;
+	// 		var sourceTop = parseInt(parent.style.top);
+	// 		var sourceLeft = parseInt(parent.style.left);
+	// 		var sourceHeight = parseInt(parent.offsetHeight);
+	// 		var sourceWidth = parseInt(parent.offsetWidth);
+
+	// 		var windowHeight = document.body.clientHeight;
+	// 		var windowWidth = document.body.clientWidth;
+
+	// 		document.onmousemove = function(e) {
+	// 			var event = e || window.event;
+	// 			var diffX = 0;
+	// 			var diffY = 0;
+	// 			if(isResize) {
+	// 				diffX = event.clientX - sourceX;
+	// 				diffY = event.clientY - sourceY;
+					
+	// 				if(!lockY) {
+	// 					if(isTop && diffY < 0) {
+	// 						var top = event.clientY <= 0 ? 0 : diffX;
+							
+	// 						if(event.clientY <= 0) {
+	// 							parent.style.top = "0px";
+	// 						} else {
+	// 							parent.style.top = event.clientY + "px";
+	// 							parent.style.height = (sourceHeight - diffY) + "px";
+	// 						}
+
+	// 					} else if(!isTop && diffY > 0) {
+	// 						if(event.clientY <= windowHeight) {
+	// 							parent.style.height = (sourceHeight + diffY) + "px";
+	// 						}							
+	// 					}
+						
+	// 				}
+
+	// 				if(!lockX) {
+	// 					if(isLeft && diffX < 0) {
+	// 						parent.style.left = event.clientX + "px";
+	// 						parent.style.width = (sourceWidth - diffX) + "px";
+	// 					} else if(!isLeft && diffX > 0){
+	// 						parent.style.width = (sourceWidth + diffX) + "px";
+	// 					}
+						
+	// 				}
+	// 			}
+	// 		}
+
+	// 		document.onmouseup = function(e) {
+	// 			var event = e || window.event;
+	// 			isResize = false;
+	// 			document.onmousemove = null;
+	// 			document.onmouseup = null;
+	// 		}
+	// 	}
+	// }
 
 	exports("message", Message);
 	
