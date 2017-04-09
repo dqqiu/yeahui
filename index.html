@@ -11,22 +11,69 @@
 
 		yeahui.require(["jquery","ccode", "message"], function(exports) {
 			var ccode = yeahui.ccode(),
-				message = yeahui.message();
+				message = yeahui.message(),
+				$ = yeahui.jquery;
 
-			console.log(message);
-
-			message.alert("成功了", {
-				title : "温馨提示",
-				btnText : ["我知道了", "hahha"],
+			message.alert(yeahui.jquery("#content"), {
+				title : "系统提示",
 				draggable : true,
+				align : "center",
+				width : 700,
+				height: 400,
+				modalClose : true,
 				resizeable : true,
-				align : "center" 
+				maxButton : true,
+				// buttons : []
+				buttons : [
+					{
+						text : "确定",
+						class : "btn-success",
+						close : true
+					},
+					{
+						text : "取消",
+						class : "btn-info",
+						close : false,
+						callback : function(messageElemenet) {
+							message.alert("哈哈哈",{
+								buttons : [
+									{
+										text : "关闭全部",
+										close : false,
+										callback : function(messageElemenet, index) {
+											message.closeAll();
+										}
+									}
+								]
+							});
+						}
+					},
+					{
+						text : "关闭",
+						class : "btn-info",
+						close : false,
+						callback : function(messageElemenet, index) {
+							if(messageElemenet) {
+								message.close(index);
+							}
+						}
+					},
+					{
+						text : "修改标题",
+						class : "btn-info",
+						close : false,
+						callback : function(messageElemenet, index) {
+							message.title("温馨提示", index);
+						}
+					}
+				]
 			},[
 				function() {
 					alert(1);
 				}
 			]);
-			console.log(ccode);
+
+
 
 			ccode.render(".code-box", {
 				encode : true
@@ -45,17 +92,10 @@
 			});
 		});
 
-
-		yeahui.foreach(yeahui.getModules(), function(index, item, key) {
-			console.log(index + ":" + item + ":" + key);
-		});
-
-
-
 	</script>
 </head>
 <body>
-	<!-- <div class="yeah-header">
+	<div class="yeah-header">
 		<div>
 			<a class="logo" href="#">
 				<image src="images/logo.png" alt="YeahUI"/>
@@ -154,6 +194,18 @@
 		</div>
 	</div>
 
-	<button class="btn btn-primary" id="message" style="margin-left: 220px;">弹出层</button> -->
+	<div id="content">
+		<table class="yeah-table">
+			<tr>
+				<th>标题</th>
+				<th>内容</th>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>content</td>
+			</tr>
+		</table>
+	</div>
+	<button class="btn btn-primary" id="message" style="margin-left: 220px;">弹出层</button>
 </body>
 </html>

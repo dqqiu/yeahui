@@ -2,6 +2,7 @@
 
 .yeah-message {
 	position: fixed;
+	_position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 999999;
@@ -19,7 +20,6 @@
 		color: $default-color;
 		clear: both;
 		border-bottom: 1px solid #eee;
-		cursor: move;
 
 		.yeah-message-title {
 			padding-left: 20px;
@@ -50,6 +50,12 @@
 		text-align: center;
 		padding: 10px 20px;
 		width: 100%;
+		position: absolute;
+		bottom: 0;
+		user-select: none;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
 	    @include boxSizing(border-box);
 
 		.btn {
@@ -64,7 +70,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	cursor: nw-resize;
+	cursor: nwse-resize;
 }
 
 .yeah-resize-top {
@@ -100,7 +106,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	cursor: se-resize;
+	cursor: nwse-resize;
 }
 
 .yeah-resize-bottom {
@@ -118,7 +124,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	cursor: sw-resize;
+	cursor: nesw-resize;
 }
 
 .yeah-resize-left {
@@ -130,13 +136,13 @@
 	cursor: col-resize;
 }
 
-.yeah-message-mode {
+.yeah-message-modal {
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	background-color: #000;
-    opacity: 0.2;
+    opacity: 0.3;
     filter: alpha(opacity=20);
 	position: fixed;
 	z-index: 999998;

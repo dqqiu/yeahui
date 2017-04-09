@@ -136,7 +136,6 @@
 
 		function executeCallback() {
 			exports.push(yeahui[module]);
-			console.log(exports);
 			if(mods.length > 1) {
 				_this.require(mods.splice(1), callback, exports);
 			} else {

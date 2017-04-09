@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>yeahui-message信息框组件</title>
+	<link rel="stylesheet" type="text/css" href="../css/yeahui.css">
+	<link rel="stylesheet" type="text/css" href="../css/sample.css">
+</head>
+<body>
+	<div class="sample-container">
+		<div class="sample-title sample-mt-20">
+			yeahui-message信息框组件(弹出层)
+		</div>
+		<div class="yeah-blockquote">
+			此模块名称：message，源代码托管：<a target=“_blank” href="https://www.github.com/dqqiu/yeahui">https://www.github.com/dqqiu/yeahui</a>
+		</div>
+
+		<fieldset class="yeah-fieldset">
+			<legend>使用说明</legend>
+		</fieldset>
+
+		<div class="sample-explain">
+			<p>message信息框弹层组件使用说明如下：</p>
+			<table class="yeah-table yeah-table-zebra" yeah-type="row-line">
+				<thead>
+					<tr>
+						<th>参数名</th>
+						<th>参数意义</th>
+						<th>默认值</th>
+						<th>说明</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>id</td>
+						<td>弹层唯一标识号</td>
+						<td>"",空字符串</td>
+						<td>标识弹层唯一，未指定时从0开始递增，若中途有指定过id，将跳过其原来应有的标识号，如：在第一个未指定id，第二个弹层id指定为xxx，第三个弹层不指定id，则id标识号分别为0，xxx，2，将跳过标识号1</td>
+					</tr>
+					<tr>
+						<td>minWidth</td>
+						<td>可调整的窗口最小宽度(启用resize功能时有效)</td>
+						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>可调整的窗口最小宽度，只在resize功能时有效</td>
+					</tr>
+					<tr>
+						<td>minHeight</td>
+						<td>可调整的窗口最小高度(启用resize功能时有效)</td>
+						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>可调整的窗口最小高度，只在resize功能时有效</td>
+					</tr>
+					<tr>
+						<td>width</td>
+						<td>弹窗宽度</td>
+						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>弹窗宽度</td>
+					</tr>
+					<tr>
+						<td>height</td>
+						<td>弹窗高度</td>
+						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>弹框高度</td>
+					</tr>
+					<tr>
+						<td>draggable</td>
+						<td>是否可拖拽(true/false)</td>
+						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>
+							true：可进行拖拽，false：不可拖拽
+						</td>
+					</tr>
+					<tr>
+						<td>resizeable</td>
+						<td>是否可调整窗口尺寸(true/false)</td>
+						<td>false</td>
+						<td>
+							true：可进行窗口尺寸调整，false：不可进行窗口尺寸调整
+						</td>
+					</tr>
+					<tr>
+						<td>maxButton</td>
+						<td>是否启用最大化按钮(true/false)</td>
+						<td>false</td>
+						<td>
+							true：启用最大化按钮，false：不启用最大化按钮，启用后可进行窗口最大化操作，窗口最大化后按钮作用改变为恢复原窗口大小
+						</td>
+					</tr>
+					<tr>
+						<td>modal</td>
+						<td>是否模态化显示(true/false)</td>
+						<td>alert类型弹层默认值为true，其他类型为false</td>
+						<td>
+							配置弹窗是否模态化显示，模态化显示时则弹窗背后出现遮罩层
+						</td>
+					</tr>
+					<tr>
+						<td>modalClose</td>
+						<td>是否支持点击模态遮罩层关闭弹窗(true/false)</td>
+						<td>false</td>
+						<td>
+							是否支持点击模态遮罩层关闭弹窗，true：点击遮罩层关闭弹窗，只在启用模态化显示时生效
+						</td>
+					</tr>
+					<tr>
+						<td>showTime</td>
+						<td>弹窗显示时间，单位：毫秒</td>
+						<td>0</td>
+						<td>
+							弹窗显示时间，单位为毫秒，设置了该值后窗口在指定的时间后将被关闭
+						</td>
+					</tr>
+					<tr>
+						<td>buttons</td>
+						<td>弹窗按钮</td>
+						<td>各类型不一致</td>
+						<td>
+							弹窗按钮，可配置多个，数组类型，子对象属性---text:按钮文字，close:点击按钮后是否关闭,class:按钮样式配置,callback:点击按钮后的回调函数
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<fieldset class="yeah-fieldset">
+			<legend>alert弹层演示</legend>
+		</fieldset>
+
+		<div class="sample-explain">
+			<p>下列为各种不同参数配置的alert弹层，点击试试看吧</p>
+			<div class="sample-mt-20">
+				<button id="default-alert" class="btn btn-primary">默认alert弹层</button>
+				<button id="modal-close-alert" class="btn btn-success">点击遮罩可关闭的alert弹层</button>
+				<button id="merge-alert" class="btn btn-info">可最大化可调整尺寸不可拖拽</button>
+			</div>
+			<pre class="yeah-code-box" yeah-type="row" yeah-title="alert弹层演示源码" yeah-skin="github" yeah-code-encode="true">
+				  yeahui.require(["jquery", "message", "ccode"], function(exports) {
+				    var message = yeahui.message(),
+					    $ = yeahui.jquery,
+					    ccode = yeahui.ccode();
+							
+				    $("#default-alert").click(function(e) {
+				      message.alert("默认alert弹层");
+				    });
+
+				    $("#modal-close-alert").click(function(e) {
+				      message.alert("点击遮罩可关闭的alert弹层", {modalClose : true});
+				    });
+
+				    $("#merge-alert").click(function(e) {
+				      message.alert("可最大化可调整尺寸不可拖拽", {
+				        maxButton : true,
+				        resizeable : true,
+				        draggable : false
+				      });
+				    });
+				  });
+			</pre>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="../yeah.js"></script>
+	<script type="text/javascript">
+		window.yeahui.require(["jquery", "message", "ccode"], function(exports) {
+			var message = yeahui.message(),
+				$ = yeahui.jquery,
+				ccode = yeahui.ccode();
+				
+			$("#default-alert").click(function(e) {
+				message.alert("默认alert弹层");
+			});
+
+			$("#modal-close-alert").click(function(e) {
+				message.alert("点击遮罩可关闭的alert弹层", {modalClose : true});
+			});
+
+			$("#merge-alert").click(function(e) {
+		    	message.alert("可最大化可调整尺寸不可拖拽", {
+		    		maxButton : true,
+		    		resizeable : true,
+		    		draggable : true
+		    	});
+			});
+		});
+	</script>
+</body>
+</html>
