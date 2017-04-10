@@ -139,7 +139,7 @@
 			if(mods.length > 1) {
 				_this.require(mods.splice(1), callback, exports);
 			} else {
-				typeof callback === "function" && callback.apply(yeahui, exports);
+				typeof callback === "function" && callback.call(yeahui, exports);
 			}
 		}
 
@@ -195,14 +195,14 @@
 		var _this = this,
 			link = doc.createElement("link"),
 			head = doc.getElementsByTagName("head")[0],
-			dir = config.dir = config.dir ? config.dir : getPath;
+			dir = config.dir = config.dir ? config.dir : getPath,
 			href = (dir + "css/") + module + ".css",
 			id = link.id = "yeah-" + module;
 
 		link.rel = "stylesheet";
 		link.type = "text/css";
 		link.media = "all";
-		link.href = href + generateVersion();
+		link.href = href + _this.generateVersion();
 
 		if(!doc.getElementById(id)) {
 			head.appendChild(link);

@@ -11,13 +11,13 @@ yeahui.define("jquery", function(exports) {
 		/* 可调整的最小高度 */
 		minHeight : 260,
 		/* 是否可拖拽 */
-		draggable : true,
+		draggable : false,
 		/* 是否可调整窗口 */
 		resizeable : false,
 		/* 默认出现位置, leftTop, centerTop, rightTop, leftCenter, center, rightCenter, leftBottom, centerBottom, rightBottom */
 		align : "center",
 		maxButton : false,
-		modal : false,
+		modal : true,
 		modalClose : false,
 		width : 300,
 		height : 260,
@@ -207,6 +207,10 @@ yeahui.define("jquery", function(exports) {
 			title = (options && options.title) ? options.title : ALERT_DEFAULT_TITLE;
 			$title.html(title);
 
+			if(messageType == MessageType.ALERT) {
+				(options && options.buttons && options.buttons.length > 1) && (options.buttons = options.buttons.slice(0, 1));
+			}
+
 			yeahui.foreach(options.buttons, function(index, button) {
 				var $sure = append("btn", $btns, "button", button.class ? button.class : "btn-primary");
 				$sure.html(button.text ? button.text : "");
@@ -288,7 +292,7 @@ yeahui.define("jquery", function(exports) {
 				screenCenter($message);
 			}
 
-			if(options && options.showTime) {
+			if(options && options.showTime && options.showTime != 0) {
 				setTimeout(function() {
 					$message.remove();
 					$modal && $modal.remove();
@@ -517,4 +521,4 @@ yeahui.define("jquery", function(exports) {
 
 	exports("message", Message);
 	
-});
+}).link("message");

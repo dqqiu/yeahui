@@ -65,7 +65,7 @@
 					<tr>
 						<td>draggable</td>
 						<td>是否可拖拽(true/false)</td>
-						<td>各类型弹层默认值不相同，此处不一一说明</td>
+						<td>false</td>
 						<td>
 							true：可进行拖拽，false：不可拖拽
 						</td>
@@ -89,7 +89,7 @@
 					<tr>
 						<td>modal</td>
 						<td>是否模态化显示(true/false)</td>
-						<td>alert类型弹层默认值为true，其他类型为false</td>
+						<td>true</td>
 						<td>
 							配置弹窗是否模态化显示，模态化显示时则弹窗背后出现遮罩层
 						</td>
@@ -115,7 +115,7 @@
 						<td>弹窗按钮</td>
 						<td>各类型不一致</td>
 						<td>
-							弹窗按钮，可配置多个，数组类型，子对象属性---text:按钮文字，close:点击按钮后是否关闭,class:按钮样式配置,callback:点击按钮后的回调函数
+							弹窗按钮，可配置多个(alert弹层只支持一个)，数组类型，子对象属性---text:按钮文字，close:点击按钮后是否关闭,class:按钮样式配置,callback:点击按钮后的回调函数
 						</td>
 					</tr>
 				</tbody>
@@ -148,10 +148,10 @@
 				    });
 
 				    $("#merge-alert").click(function(e) {
-				      message.alert("可最大化可调整尺寸不可拖拽", {
+				      message.alert("可最大化可调整尺寸可拖拽", {
 				        maxButton : true,
 				        resizeable : true,
-				        draggable : false
+				        draggable : true
 				      });
 				    });
 				  });
@@ -167,7 +167,6 @@
 			var message = yeahui.message(),
 				$ = yeahui.jquery,
 				ccode = yeahui.ccode();
-				
 			$("#default-alert").click(function(e) {
 				message.alert("默认alert弹层");
 			});
@@ -177,7 +176,7 @@
 			});
 
 			$("#merge-alert").click(function(e) {
-		    	message.alert("可最大化可调整尺寸不可拖拽", {
+		    	message.alert("可最大化可调整尺寸可拖拽", {
 		    		maxButton : true,
 		    		resizeable : true,
 		    		draggable : true
