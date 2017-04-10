@@ -33,7 +33,8 @@ yeahui.define("jquery", function(exports) {
 	};
 
 	function Message(options) {
-		return Message.fn._get();
+		var _this = this;
+		return _this._get();
 	};
 
 	function append(ele, parent, eleType, classes) {
@@ -253,7 +254,6 @@ yeahui.define("jquery", function(exports) {
 				window.onresize = function(e) {
 					var _clientWidth = document.documentElement.clientWidth;
 					var _clientHeight = document.documentElement.clientHeight;
-					console.log("source : " + sourceClientWidth + "  _ : " + _clientWidth);
 					var setTop = $message[0].offsetTop - ((sourceClientHeight - _clientHeight) / 2);
 					var setLeft = $message[0].offsetLeft - ((sourceClientWidth - _clientWidth) / 2);
 					setTop = setTop <= 0 ? 0 : setTop;
@@ -264,13 +264,6 @@ yeahui.define("jquery", function(exports) {
 					$message[0].style.top = setTop + "px";
 					sourceClientWidth = _clientWidth;
 					sourceClientHeight = _clientHeight;
-					// resize($message[0], $(window)[0], false, false, true, true, options.minWidth, options.minHeight);
-					// resize($message[0], $(window)[0], false, false, false, true, options.minWidth, options.minHeight);
-					// resize($message[0], $(window)[0], false, false, false, false, options.minWidth, options.minHeight);
-					// resize($message[0], $(window)[0], false, false, true, false, options.minWidth, options.minHeight);
-					// $message[0].style.left = (document.documentElement.clientWidth - $message[0].offsetWidth) / 2 + "px";
-					// $message[0].style.top = (document.documentElement.clientHeight - $message[0].offsetHeight) / 2 + "px";
-
 				}
 			}
 
@@ -455,70 +448,6 @@ yeahui.define("jquery", function(exports) {
 		}
 	}
 
-
-	// function resize(parent, target, lockX, lockY, isLeft, isTop) {
-	// 	var isResize = false;
-	// 	target.onmousedown = function(e) {
-	// 		var event = e || window.event;
-	// 		isResize = true;
-	// 		var sourceX = event.clientX;
-	// 		var sourceY = event.clientY;
-	// 		var sourceTop = parseInt(parent.style.top);
-	// 		var sourceLeft = parseInt(parent.style.left);
-	// 		var sourceHeight = parseInt(parent.offsetHeight);
-	// 		var sourceWidth = parseInt(parent.offsetWidth);
-
-	// 		var windowHeight = document.body.clientHeight;
-	// 		var windowWidth = document.body.clientWidth;
-
-	// 		document.onmousemove = function(e) {
-	// 			var event = e || window.event;
-	// 			var diffX = 0;
-	// 			var diffY = 0;
-	// 			if(isResize) {
-	// 				diffX = event.clientX - sourceX;
-	// 				diffY = event.clientY - sourceY;
-					
-	// 				if(!lockY) {
-	// 					if(isTop && diffY < 0) {
-	// 						var top = event.clientY <= 0 ? 0 : diffX;
-							
-	// 						if(event.clientY <= 0) {
-	// 							parent.style.top = "0px";
-	// 						} else {
-	// 							parent.style.top = event.clientY + "px";
-	// 							parent.style.height = (sourceHeight - diffY) + "px";
-	// 						}
-
-	// 					} else if(!isTop && diffY > 0) {
-	// 						if(event.clientY <= windowHeight) {
-	// 							parent.style.height = (sourceHeight + diffY) + "px";
-	// 						}							
-	// 					}
-						
-	// 				}
-
-	// 				if(!lockX) {
-	// 					if(isLeft && diffX < 0) {
-	// 						parent.style.left = event.clientX + "px";
-	// 						parent.style.width = (sourceWidth - diffX) + "px";
-	// 					} else if(!isLeft && diffX > 0){
-	// 						parent.style.width = (sourceWidth + diffX) + "px";
-	// 					}
-						
-	// 				}
-	// 			}
-	// 		}
-
-	// 		document.onmouseup = function(e) {
-	// 			var event = e || window.event;
-	// 			isResize = false;
-	// 			document.onmousemove = null;
-	// 			document.onmouseup = null;
-	// 		}
-	// 	}
-	// }
-
-	exports("message", Message);
+	exports("message", new Message());
 	
 }).link("message");

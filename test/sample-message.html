@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>yeahui-message信息框组件</title>
-	<link rel="stylesheet" type="text/css" href="../css/yeahui.css">
 	<link rel="stylesheet" type="text/css" href="../css/sample.css">
 </head>
 <body>
@@ -131,30 +130,30 @@
 			<div class="sample-mt-20">
 				<button id="default-alert" class="btn btn-primary">默认alert弹层</button>
 				<button id="modal-close-alert" class="btn btn-success">点击遮罩可关闭的alert弹层</button>
-				<button id="merge-alert" class="btn btn-info">可最大化可调整尺寸不可拖拽</button>
+				<button id="merge-alert" class="btn btn-info">可最大化可调整尺寸可拖拽</button>
 			</div>
-			<pre class="yeah-code-box" yeah-type="row" yeah-title="alert弹层演示源码" yeah-skin="github" yeah-code-encode="true">
-				  yeahui.require(["jquery", "message", "ccode"], function(exports) {
-				    var message = yeahui.message(),
-					    $ = yeahui.jquery,
-					    ccode = yeahui.ccode();
+			<pre id="yeahCode" class="yeah-code-box" yeah-type="row" yeah-title="alert弹层演示源码" yeah-skin="github" yeah-code-encode="true">
+				yeahui.require(["jquery", "message", "code"], function(exports) {
+				  var message = yeahui.message,
+					  $ = yeahui.jquery,
+					  ccode = yeahui.code;
 							
-				    $("#default-alert").click(function(e) {
-				      message.alert("默认alert弹层");
-				    });
+				  $("#default-alert").click(function(e) {
+				    message.alert("默认alert弹层");
+				  });
 
-				    $("#modal-close-alert").click(function(e) {
-				      message.alert("点击遮罩可关闭的alert弹层", {modalClose : true});
-				    });
+				  $("#modal-close-alert").click(function(e) {
+				    message.alert("点击遮罩可关闭的alert弹层", {modalClose : true});
+				  });
 
-				    $("#merge-alert").click(function(e) {
-				      message.alert("可最大化可调整尺寸可拖拽", {
-				        maxButton : true,
-				        resizeable : true,
-				        draggable : true
-				      });
+				  $("#merge-alert").click(function(e) {
+				    message.alert("可最大化可调整尺寸可拖拽", {
+				      maxButton : true,
+				      resizeable : true,
+				      draggable : true
 				    });
 				  });
+				});
 			</pre>
 		</div>
 	</div>
@@ -163,10 +162,10 @@
 
 	<script type="text/javascript" src="../yeah.js"></script>
 	<script type="text/javascript">
-		window.yeahui.require(["jquery", "message", "ccode"], function(exports) {
-			var message = yeahui.message(),
+		window.yeahui.require(["jquery", "message", "code"], function(exports) {
+			var message = yeahui.message,
 				$ = yeahui.jquery,
-				ccode = yeahui.ccode();
+				ccode = yeahui.code;
 			$("#default-alert").click(function(e) {
 				message.alert("默认alert弹层");
 			});

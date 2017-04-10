@@ -24,7 +24,7 @@
 		},
 		modules = {
 			"jquery" : "jquery",
-			"ccode" : "ccode",
+			"code" : "code",
 			"message" : "message"
 		};
 		config.modules = {};
@@ -262,4 +262,5 @@
 	}
 
 	win.yeahui = new YeahUI();
+	yeahui.link("font-awesome.min").link("component").link("common").link("table").link("form").link("btn");
 }(window);

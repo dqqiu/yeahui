@@ -4,17 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>YeahUI</title>
-	<link rel="stylesheet" type="text/css" href="css/yeahui.css">
 	<link rel="stylesheet" type="text/css" href="css/sample.css">
 	<script type="text/javascript" src="yeah.js"></script>
 	<script type="text/javascript">
 
-		yeahui.require(["jquery","ccode", "message"], function(exports) {
-			var ccode = yeahui.ccode(),
-				message = yeahui.message(),
+		yeahui.require(["jquery","code", "message"], function(exports) {
+			var ccode = yeahui.code,
+				message = yeahui.message,
 				$ = yeahui.jquery;
 
-			message.alert(yeahui.jquery("#content"), {
+			message.alert($("#content"), {
 				title : "系统提示",
 				draggable : true,
 				align : "center",
@@ -84,7 +83,6 @@
 				skin : "github",
 				showRowNumber : true
 			});
-			var $ = yeahui.jquery;
 			$(function() {
 				$("#message").on("click", function() {
 					message.alert("成功了");
