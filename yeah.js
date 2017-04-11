@@ -261,6 +261,27 @@
 		return mods;
 	}
 
+	YeahUI.fn.cssLoaded = function() {
+		var _this = this,
+			head = doc.getElementsByTagName("head")[0],
+			dir = config.dir = config.dir ? config.dir : getPath;
+		var cssPath = (dir + "css/yeahui.css");
+		var links = document.getElementsByTagName("link");
+		var exist = false;
+		if(links && links.length > 0) {
+			_this.foreach(links, function(index, item) {
+				if(item.href.indexOf("yeahui.css") != -1) {
+					exist = true;
+					return false;
+				}
+			});
+		}
+
+		return exist;
+	}
+
 	win.yeahui = new YeahUI();
-	yeahui.link("font-awesome.min").link("component").link("common").link("table").link("form").link("btn");
+	if(!win.yeahui.cssLoaded()) {
+		yeahui.link("font-awesome.min").link("component").link("common").link("table").link("form").link("btn");
+	}
 }(window);
