@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'font-yeah';
-  src: url("fonts/font-yeah.eot?1qmq3m");
-  src: url("fonts/font-yeah.eot?1qmq3m#iefix") format("embedded-opentype"), url("fonts/font-yeah.ttf?1qmq3m") format("truetype"), url("fonts/font-yeah.woff?1qmq3m") format("woff"), url("fonts/font-yeah.svg?1qmq3m#font-yeah") format("svg");
+  src: url("../fonts/font-yeah.eot?1qmq3m");
+  src: url("../fonts/font-yeah.eot?1qmq3m#iefix") format("embedded-opentype"), url("../fonts/font-yeah.ttf?1qmq3m") format("truetype"), url("../fonts/font-yeah.woff?1qmq3m") format("woff"), url("../fonts/font-yeah.svg?1qmq3m#font-yeah") format("svg");
   font-weight: normal;
   font-style: normal;
 }

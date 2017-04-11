@@ -40,7 +40,7 @@
 .yeah-message .yeah-message-header .yeah-message-control i {
   cursor: pointer;
   margin-left: 6px;
-  font-size: 16px;
+  font-size: 12px;
 }
 /* line 42, ../sass/message.scss */
 .yeah-message .yeah-message-content {

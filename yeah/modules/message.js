@@ -151,7 +151,7 @@ yeahui.define("jquery", function(exports) {
 
 			var $control = append(MESSAGE_CONTROL, $header);
 			if(options && options.maxButton) {
-				var $maxButton = append(MESSAGE_CONTROL_MAX, $control, "i", "icon icon-fullscreen");
+				var $maxButton = append(MESSAGE_CONTROL_MAX, $control, "i", "icon-enlarge");
 				var curTop;
 				var curLeft;
 				var curWidth = $message.width();
@@ -165,7 +165,7 @@ yeahui.define("jquery", function(exports) {
 						left : "0px",
 						top : "0px"
 					});
-					$maxButton.removeClass("icon-fullscreen").addClass("icon-resize-small");
+					$maxButton.removeClass("icon-enlarge").addClass("icon-shrink");
 					$maxButton.removeClass(MESSAGE_CONTROL_MAX).addClass(MESSAGE_CONTROL_RECOVER);
 
 					$maxButton.unbind("click");
@@ -183,7 +183,7 @@ yeahui.define("jquery", function(exports) {
 						left : curLeft + "px",
 						top : curTop + "px"
 					});
-					$maxButton.removeClass("icon-resize-small").addClass("icon-fullscreen");
+					$maxButton.removeClass("icon-shrink").addClass("icon-enlarge");
 					$maxButton.removeClass(MESSAGE_CONTROL_RECOVER).addClass(MESSAGE_CONTROL_MAX);
 					$maxButton.unbind("click");
 
@@ -198,7 +198,7 @@ yeahui.define("jquery", function(exports) {
 					toMax();
 				});
 			}
-			var $close = append(MESSAGE_CONTROL_CLOSE, $control, "i", "icon icon-remove");
+			var $close = append(MESSAGE_CONTROL_CLOSE, $control, "i", "icon-cross");
 			
 
 			var $msg = append("", $content);

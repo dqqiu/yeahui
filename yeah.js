@@ -282,6 +282,6 @@
 
 	win.yeahui = new YeahUI();
 	if(!win.yeahui.cssLoaded()) {
-		yeahui.link("font-awesome.min").link("component").link("common").link("table").link("form").link("btn");
+		yeahui.link("font-yeah").link("component").link("common").link("table").link("form").link("btn");
 	}
 }(window);
