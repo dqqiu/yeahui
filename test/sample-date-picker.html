@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>sample-date-picker</title>
+	<link rel="stylesheet" type="text/css" href="../css/sample.css">
+	<link rel="stylesheet" type="text/css" href="../css/form.css">
+</head>
+<body>
+	<div class="sample-container yeah-form">
+		<input type="text" id="datepicker" class="yeah-form-input"/>
+	</div>
+	<script type="text/javascript" src="../yeah.js"></script>
+	<script type="text/javascript">
+		yeahui.require(["jquery", "datepicker"], function(exports){
+			var datepicker = yeahui.datePicker;
+			datepicker.render({
+				format : "yyyy-MM-dd hh:mm:ss",
+				element : "#datepicker"
+			});
+		});
+	</script>
+</body>
+</html>

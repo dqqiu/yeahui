@@ -25,6 +25,7 @@
 		modules = {
 			"jquery" : "jquery",
 			"code" : "code",
+			"datepicker" : "datepicker",
 			"message" : "message"
 		};
 		config.modules = {};
