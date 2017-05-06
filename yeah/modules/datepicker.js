@@ -3,11 +3,17 @@ yeahui.define("jquery", function(exports) {
 
 	var $ = yeahui.jquery;
 	
+	/**
+	 * 日历选择器
+	 */
 	function YeahDatePicker() {
 		var _this = this;
 		return _this._get();
 	};
 	
+	/**
+	 * 日历选择器默认配置参数
+	 */
 	var defaults = {
 		element : "#id",
 		trigger : "click",
@@ -27,6 +33,9 @@ yeahui.define("jquery", function(exports) {
 		}
 	};
 	
+	/**
+	 * 星期显示数组
+	 */
 	var weeks = [
 	    "日",
 	    "一",
@@ -68,6 +77,7 @@ yeahui.define("jquery", function(exports) {
 		},
 		/**
 		 * 日历渲染
+		 * @param options {object} 配置参数
 		 */
 		render : function(options) {
 			var _this = this;
@@ -76,10 +86,16 @@ yeahui.define("jquery", function(exports) {
 		},
 		/**
 		 * 不足补零
+		 * @param num {number} 数字
 		 */
 		digit : function(num) {
 			return num < 10 ? ("0" + (num)) : num;
 		},
+
+		/**
+		 * 创建日历结构
+		 * @param options {object} 配置参数
+		 */
 		create : function(options) {
 			var _this = this;
 			var $dpElement = $(options.element);
@@ -117,6 +133,11 @@ yeahui.define("jquery", function(exports) {
 					$dp.fadeIn();
 					$this.attr(dpState, "show");
 				}
+			});
+
+			$dpElement.on("blur", function(e) {
+				$dp.fadeOut();
+				$(this).attr(dpState, "hide");
 			});
 
 			$dp.on("click", function(e) {

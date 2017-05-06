@@ -6,6 +6,7 @@ yeahui.define("jquery", function(exports) {
 	var about = "https://dqqiu.github.io/yeahui";
 	var skinPrefix = "yeah-code-";
 
+	// 默认配置
 	var defaults = {
 		encode: false,
 		title: "yeah-code",
@@ -17,13 +18,21 @@ yeahui.define("jquery", function(exports) {
 		editable: false
 	};
 
-	var YeahCode = function(selector, options) {
+	/**
+	 * 代码修饰器
+	 */
+	var YeahCode = function() {
 		var _this = this;
-		return _this.render(selector, options);
+		return _this;
 	}
 
 	YeahCode.fn = YeahCode.prototype;
 
+	/**
+	 * 代码修饰器渲染
+	 * @param selector {string} 选择器
+	 * @param options {obj} 配置参数
+	 */
 	YeahCode.fn.render = function(selector, options) {
 		var _this = this;
 		options = $.extend({}, defaults, options);

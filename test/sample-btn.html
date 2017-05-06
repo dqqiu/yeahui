@@ -137,10 +137,15 @@
 
 
 	</div>
-	<script type="text/javascript" src="../yeah/modules/jquery.js"></script>
-	<script type="text/javascript" src="../yeah/modules/code.js"></script>
+	<script type="text/javascript" src="../yeah.js"></script>
 	<script type="text/javascript">
-		$(document).code();
+		yeahui.require(["jquery", "code"], function(exports){
+			var code = yeahui.code;
+
+			code.render(".yeah-code-box", {
+				encode : true
+			});
+		});
 	</script>
 </body>
 </html>

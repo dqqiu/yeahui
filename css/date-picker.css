@@ -104,7 +104,7 @@
 
 /* line 96, ../sass/date-picker.scss */
 .yeah-datepicker-wrapper .yeah-table tr td.yeah-current {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0 !important;
 }
 
 /* end datepicker-body style */
